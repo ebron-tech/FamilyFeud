@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using round;
+
 public class util : MonoBehaviour {
 
 	// Use this for initialization
@@ -9,8 +11,8 @@ public class util : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	public static string getFolderDataPath(string folderName){
+	//getFolderPathNextToAppFile Gets the path of a folder next to the binary app (compilated).
+	public static string getFolderPathNextToAppFile(string folderName){
 		string folderPath="";
 		#if UNITY_EDITOR
 		folderPath = Application.dataPath + "/StreamingAssets/"+folderName+"/";
@@ -22,8 +24,9 @@ public class util : MonoBehaviour {
 		
 		return folderPath;
 	}
-	public static string[] getDataFilesFromPath(string folderName){
-		DirectoryInfo info = new DirectoryInfo(getFolderDataPath(folderName));
+	//getDataFilesFromPath gets the .json files files from path
+	public static string[] getJsonFilesFromPath(string folderPath){
+		DirectoryInfo info = new DirectoryInfo(folderPath);
 		FileInfo[] files= info.GetFiles();
 		//string[] filesStr= new string[files.Length];
 		List<string> filesStr = new List<string>();
@@ -37,47 +40,23 @@ public class util : MonoBehaviour {
 		}
 		return filesStr.ToArray();
 	}
+	public static Round[] getRoundsFromFolder(string RoundsFolderName){
+		List<Round> rounds = new List<Round>();
+		string folderPath=util.getFolderPathNextToAppFile(RoundsFolderName); //Gets the folder name (next to the binary app (.app .exe))
+		string[] filePaths = util.getJsonFilesFromPath(folderPath); //Gets the json files inside the folder.
+		foreach(string file in filePaths){ 	//Iterate between all the names.
+			//Debug.Log("checking:"+ file);	//Log if the files adress is correct
+			System.IO.StreamReader reader = new System.IO.StreamReader(file);  // Reads the json file
+        	string jsonContent = reader.ReadToEnd(); //gets the string
+            reader.Close();	//Closes the file
+			rounds.Add(Round.FromJson(jsonContent));//Convert the text to data.
 
-	public static string getMobileDataPath (string DatabaseName){
-		#if UNITY_EDITOR
-		var dbPath = string.Format(@"Assets/StreamingAssets/{0}", DatabaseName);
-		#else
-		// check if file exists in Application.persistentDataPath
-		var filepath = string.Format("{0}/{1}", Application.persistentDataPath, DatabaseName);
-
-		if (!File.Exists(filepath))
-		{
-		Debug.Log("Database not in Persistent path");
-		// if it doesn't ->
-		// open StreamingAssets directory and load the db ->
-
-		#if UNITY_ANDROID 
-		var loadDb = new WWW("jar:file://" + Application.dataPath + "!/assets/" + DatabaseName);  // this is the path to your StreamingAssets in android
-		while (!loadDb.isDone) { }  // CAREFUL here, for safety reasons you shouldn't let this while loop unattended, place a timer and error check
-		// then save to Application.persistentDataPath
-		File.WriteAllBytes(filepath, loadDb.bytes);
-		#elif UNITY_IOS
-		var loadDb = Application.dataPath + "/Raw/" + DatabaseName;  // this is the path to your StreamingAssets in iOS
-		// then save to Application.persistentDataPath
-		File.Copy(loadDb, filepath);
-		#elif UNITY_WP8
-		var loadDb = Application.dataPath + "/StreamingAssets/" + DatabaseName;  // this is the path to your StreamingAssets in iOS
-		// then save to Application.persistentDataPath
-		File.Copy(loadDb, filepath);
-		#elif UNITY_WINRT
-		var loadDb = Application.dataPath + "/StreamingAssets/" + DatabaseName;  // this is the path to your StreamingAssets in iOS
-		// then save to Application.persistentDataPath
-		File.Copy(loadDb, filepath);
-		#else
-		var loadDb = Application.dataPath + "/StreamingAssets/" + DatabaseName;  // this is the path to your StreamingAssets in iOS
-		// then save to Application.persistentDataPath
-		File.Copy(loadDb, filepath);
-		#endif
+			//foreach(RoundElement re in r.Rounds){	//Debug: make sure the data is okay 
+				//Debug.Log("-"+re.Question); //Log the question names
+			//}
 		}
-
-		var dbPath = filepath;
-		#endif
-		Debug.Log("Final PATH: " + dbPath);     
-		return dbPath;
+		return rounds.ToArray();
 	}
+
+	
 }

@@ -4,7 +4,7 @@
          "multi":1,
          "question":"Canciones de Miguel Cassina",
          "resp":[
-           {"name":"Renuevame","points":25},
+           {"name":"Quien es Miguel Cassina?","points":25},
            {"name":"Quiero Levantar mis manos","points":15},
            {"name":"Dame mas de tí","points":15},
            {"name":"Renuevame","points":23},
