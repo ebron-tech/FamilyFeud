@@ -10,20 +10,20 @@ public class util : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public static string getDesktopDataPath(string folderName){
+	public static string getFolderDataPath(string folderName){
 		string folderPath="";
 		#if UNITY_EDITOR
 		folderPath = Application.dataPath + "/StreamingAssets/"+folderName+"/";
 		#elif UNITY_WINRT
-		folderPath = Application.dataPath + "/"+folderName+"/";
+		folderPath = Application.dataPath + "/"+folderName+"/"; //.exe file is next to the folder.
 		#elif UNITY_STANDALONE_OSX
-		folderPath = new DirectoryInfo(Application.dataPath).Parent.Parent.ToString()+folderName+"/";
+		folderPath = new DirectoryInfo(Application.dataPath).Parent.Parent.ToString()+"/"+folderName+"/"; //OSX the path is inside the .app, this change the path 2 levels up in order to access the 
 		#endif
 		
 		return folderPath;
 	}
-	public static string[] getDesktopDataFiles(string folderName){
-		DirectoryInfo info = new DirectoryInfo(getDesktopDataPath(folderName));
+	public static string[] getDataFilesFromPath(string folderName){
+		DirectoryInfo info = new DirectoryInfo(getFolderDataPath(folderName));
 		FileInfo[] files= info.GetFiles();
 		//string[] filesStr= new string[files.Length];
 		List<string> filesStr = new List<string>();
