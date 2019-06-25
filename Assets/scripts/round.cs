@@ -39,7 +39,7 @@ namespace round
         public string Name { get; set; }
 
         [JsonProperty("points")]
-        public long Points { get; set; }
+        public int Points { get; set; }
     }
 
     public partial class Round
