@@ -40,6 +40,7 @@ public class util : MonoBehaviour {
 		}
 		return filesStr.ToArray();
 	}
+	//getRoundsFromFolder Returns all the parsed Round objects from the folder.
 	public static Round[] getRoundsFromFolder(string RoundsFolderName){
 		List<Round> rounds = new List<Round>();
 		string folderPath=util.getFolderPathNextToAppFile(RoundsFolderName); //Gets the folder name (next to the binary app (.app .exe))

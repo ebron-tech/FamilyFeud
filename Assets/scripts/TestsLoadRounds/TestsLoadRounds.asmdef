@@ -1,0 +1,9 @@
+﻿{
+    "name": "TestsLoadRounds",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
