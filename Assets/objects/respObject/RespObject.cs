@@ -7,6 +7,7 @@ public class RespObject : MonoBehaviour {
 	public TMPro.TextMeshPro respText;
 	public TMPro.TextMeshPro respPoints;
 	public TMPro.TextMeshPro respIndex;
+	public GameObject indexContainer;
 	Animation rotateShow;
 bool activated;
 	void Awake(){
@@ -29,5 +30,8 @@ bool activated;
 	}
 	void Update () {
 		
+	}
+	public void hideId(){
+		indexContainer.SetActive(false);
 	}
 }
