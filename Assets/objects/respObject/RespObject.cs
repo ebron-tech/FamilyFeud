@@ -40,5 +40,6 @@ bool activated;
 	}
 	public void hideId(){
 		indexContainer.SetActive(false);
+		respIndex.gameObject.SetActive(false);
 	}
 }

@@ -117,19 +117,21 @@ public class BoardManager : MonoBehaviour
     //      1=Left Team.
     //      2=Right Team.
     public void takeThePoints(int team){
-        switch(team){
-            case 1:
-                leftPoints+=currentPoints;
-                visualBoard.updateLeftPoints(leftPoints);
-                pointsGivedToTeam=true;
-                break;
-            case 2:
-                rightPoints+=currentPoints;
-                visualBoard.updateRightPoints(rightPoints);
-                pointsGivedToTeam=true;
-                break;
-            default:
-                break;
+        if(!pointsGivedToTeam){
+            switch(team){
+                case 1:
+                    leftPoints+=currentPoints;
+                    visualBoard.updateLeftPoints(leftPoints);
+                    pointsGivedToTeam=true;
+                    break;
+                case 2:
+                    rightPoints+=currentPoints;
+                    visualBoard.updateRightPoints(rightPoints);
+                    pointsGivedToTeam=true;
+                    break;
+                default:
+                    break;
+            }
         }
     }
     public bool nextRound(){
@@ -148,6 +150,10 @@ public class BoardManager : MonoBehaviour
     public void repeatedAnswer(){
         audioSrc.clip=sounds[2];
         audioSrc.Play();
+    }
+    public void strike(){
+        strikes++;
+
     }
 
 }
