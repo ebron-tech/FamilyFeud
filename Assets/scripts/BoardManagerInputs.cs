@@ -40,5 +40,18 @@ public class BoardManagerInputs : MonoBehaviour
             boardManager.showResponse(8);
         }
         
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
+            boardManager.nextRound();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift)){
+            if(Input.GetKeyDown(KeyCode.LeftArrow)){
+                boardManager.takeThePoints(1);
+            }
+            if(Input.GetKeyDown(KeyCode.RightArrow)){
+                boardManager.takeThePoints(2);
+            }
+        }
+
     }
 }
