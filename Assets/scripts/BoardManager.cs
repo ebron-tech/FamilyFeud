@@ -21,12 +21,14 @@ public class BoardManager : MonoBehaviour
     //2->Repeated
     public AudioClip[] sounds;
     AudioSource audioSrc;
+    strikeController strikeCtl;
 
     void Awake(){
         sessions = util.getRoundsFromFolder("rounds");
         //Debug.Log(sessions[0].Rounds[0].Question);
         audioSrc= gameObject.GetComponent<AudioSource>();
         visualBoard= gameObject.GetComponent<VisualBoard>();
+        strikeCtl= gameObject.GetComponent<strikeController>();
     }
 
 
@@ -118,6 +120,7 @@ public class BoardManager : MonoBehaviour
     //      2=Right Team.
     public void takeThePoints(int team){
         if(!pointsGivedToTeam){
+            strikes=0;
             switch(team){
                 case 1:
                     leftPoints+=currentPoints;
@@ -153,7 +156,10 @@ public class BoardManager : MonoBehaviour
     }
     public void strike(){
         strikes++;
-
+        strikeCtl.triggerStrike(strikes);
+        audioSrc.clip=sounds[1];
+        audioSrc.Play();
+        Debug.Log(strikes);
     }
 
 }

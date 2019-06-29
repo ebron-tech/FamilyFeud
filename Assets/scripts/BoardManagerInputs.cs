@@ -50,6 +50,10 @@ public class BoardManagerInputs : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R)){
             boardManager.repeatedAnswer();
         }
+        //Trigger Strikes
+        if(Input.GetKeyDown(KeyCode.X)){
+            boardManager.strike();
+        }
         //Load the next round
         if(Input.GetKey(KeyCode.LeftShift)){
             if(Input.GetKeyDown(KeyCode.RightArrow)){
