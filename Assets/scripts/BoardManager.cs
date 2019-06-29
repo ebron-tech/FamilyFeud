@@ -155,11 +155,13 @@ public class BoardManager : MonoBehaviour
         audioSrc.Play();
     }
     public void strike(){
-        strikes++;
-        strikeCtl.triggerStrike(strikes);
-        audioSrc.clip=sounds[1];
-        audioSrc.Play();
-        Debug.Log(strikes);
+        if(strikes <3){
+            strikes++;
+            strikeCtl.triggerStrike(strikes);
+            audioSrc.clip=sounds[1];
+            audioSrc.Play();
+            Debug.Log(strikes);
+        }
     }
 
 }

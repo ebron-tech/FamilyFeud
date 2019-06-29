@@ -18,7 +18,7 @@ public class strikeObj : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void Start()
+    void Awake()
     {
         anim=gameObject.GetComponent<Animation>();
     }

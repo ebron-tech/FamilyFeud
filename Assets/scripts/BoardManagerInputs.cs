@@ -39,13 +39,7 @@ public class BoardManagerInputs : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha9)){
             boardManager.showResponse(8);
         }
-        //Assing points to team
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){
-            boardManager.takeThePoints(1);
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow)){
-            boardManager.takeThePoints(2);
-        }
+      
         //Plays the repeated sound
         if(Input.GetKeyDown(KeyCode.R)){
             boardManager.repeatedAnswer();
@@ -58,6 +52,14 @@ public class BoardManagerInputs : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift)){
             if(Input.GetKeyDown(KeyCode.RightArrow)){
                 boardManager.nextRound();
+            }
+        }else{
+            //Assing points to team
+            if(Input.GetKeyDown(KeyCode.LeftArrow)){
+                boardManager.takeThePoints(1);
+            }
+            if(Input.GetKeyDown(KeyCode.RightArrow)){
+                boardManager.takeThePoints(2);
             }
         }
 
