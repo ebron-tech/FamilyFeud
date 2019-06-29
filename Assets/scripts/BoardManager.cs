@@ -145,5 +145,9 @@ public class BoardManager : MonoBehaviour
             }
         }return false;
     }
+    public void repeatedAnswer(){
+        audioSrc.clip=sounds[2];
+        audioSrc.Play();
+    }
 
 }
