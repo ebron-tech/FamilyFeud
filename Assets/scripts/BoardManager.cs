@@ -29,6 +29,7 @@ public class BoardManager : MonoBehaviour
         audioSrc= gameObject.GetComponent<AudioSource>();
         visualBoard= gameObject.GetComponent<VisualBoard>();
         strikeCtl= gameObject.GetComponent<strikeController>();
+        Application.runInBackground=true;
     }
 
 
@@ -98,17 +99,17 @@ public class BoardManager : MonoBehaviour
     //   value:
     //      Recieves the index of each response and show it, 
     //      plays the sound, add the points to CurrentPoints variable and updates the visual text.
-    public bool showResponse(int id){
+    public void showResponse(int id){
         if(id<respObjects.Count){
             if( respObjects[id].showResponse()){
                 audioSrc.clip=sounds[0];
                 audioSrc.Play();
                 currentPoints+=respObjects[id].getPoints();
                 visualBoard.updateCurrentPoints(currentPoints);
-                return true;
+                //return true;
             };
         }
-        return false;
+        //return false;
     }
     
     // Summary:

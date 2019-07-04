@@ -17,6 +17,8 @@ namespace round
 
     public partial class Round
     {
+        [JsonProperty("roundName")]
+        public string RoundName { get; set; }
         [JsonProperty("rounds")]
         public RoundElement[] Rounds { get; set; }
     }
