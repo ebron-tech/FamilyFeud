@@ -8,15 +8,14 @@ public class Answerbutton : MonoBehaviour
     public int points;
     public string answer;
     public int id;
-    BoardOSCinputs sendOSCmessage;
     UnityEngine.UI.Button btn;
     UnityEngine.UI.Image imgBG;
     DashboardSendOSC sendOSC;
+    KeyCode keyPressed;
     void Awake()
     {
         btn = gameObject.GetComponent<UnityEngine.UI.Button>();
         imgBG = gameObject.GetComponent<UnityEngine.UI.Image>();
-        sendOSCmessage = gameObject.GetComponent<BoardOSCinputs>();
         sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>();
     }
 
@@ -24,16 +23,22 @@ public class Answerbutton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(keyPressed)){
+            showResp();
+        }
     }
-    public void init(string answ, int pnts){
+    public void init(int Id, string answ, int pnts){
+        this.id=Id+1;
         answer=answ;
         points = pnts;
-        btn.onClick.AddListener(showResp);
+        btn.onClick.AddListener(showResp); 
+        keyPressed = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Alpha"+id) ;
+        txtAnswer.text= answer;
+        txtPoints.text=points+"";
     }
 
     public void showResp(){
-        txtAnswer.color=Color.white;
+        //txtAnswer.color=Color.white;
         imgBG.color=Color.green;
         sendOSC.selectAnswr(id);
         Debug.Log("buttonpressed:"+ id);

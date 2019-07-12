@@ -32,6 +32,10 @@ public class BoardOSCinputs : MonoBehaviour
             Debug.Log(value);
                 boardManager.showResponse(int.Parse(value));
             break;
+            case "round/":
+            break;
+            case "action/":
+            break;
             default:
                 Debug.Log("DefaultCase: "+addres);
             break;

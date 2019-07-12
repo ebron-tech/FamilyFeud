@@ -15,29 +15,31 @@ public class DashboardSendOSC : MonoBehaviour
      
     }
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Alpha1)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/",1);
+        /* if(Input.GetKeyDown(KeyCode.Alpha1)){
+            OSCHandler.Instance.SendMessageToClient("controller","resp/",0);
         }
         if(Input.GetKeyDown(KeyCode.Alpha2)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/","2");            
+            OSCHandler.Instance.SendMessageToClient("controller","resp/","1");            
         }
         if(Input.GetKeyDown(KeyCode.Alpha3)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/",3);
+            OSCHandler.Instance.SendMessageToClient("controller","resp/",2);
         }
         if(Input.GetKeyDown(KeyCode.Alpha4)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/","4");
+            OSCHandler.Instance.SendMessageToClient("controller","resp/","3");
         }
         if(Input.GetKeyDown(KeyCode.Alpha5)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/",5);
+            OSCHandler.Instance.SendMessageToClient("controller","resp/",4);
         }
         if(Input.GetKeyDown(KeyCode.Alpha6)){
-            OSCHandler.Instance.SendMessageToClient("controller","resp/","6");
+            OSCHandler.Instance.SendMessageToClient("controller","resp/","5");
         }
+        */
     }
 
    public void selectAnswr(int id){
-    //    client.Send("/answr",id);
-       // Debug.Log("SendOSC: answr "+id);
+       OSCHandler.Instance.SendMessageToClient("controller","resp/",id-1);
+    //   client.Send("/answr",id);
+        Debug.Log("SendOSC: answr "+id);
     }
 
     void OnApplicationQuit(){
