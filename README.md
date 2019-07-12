@@ -8,7 +8,8 @@ Assuming you are a developer, have some coding knowledge or just a Unity3d fan. 
 1. Unity 2019.1.8f1.
     1. Shader Graph (5.7.2) (download from Unity package manager).
     2. Lightweight RP (5.7.2) (download from Unity package manager).
-    3. OSC communication protocol [git package](https://github.com/keijiro/OscJack).
+    3. OSC communication protocol [git package](https://github.com/jorgegarcia/UnityOSC).
+        1. Deployed the git repo inside /OSC
 
 The binaries contain 3 elements:
 1. The app ( the build compiled for Windows and OSX).
