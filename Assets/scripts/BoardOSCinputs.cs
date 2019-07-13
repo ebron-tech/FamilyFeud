@@ -28,7 +28,7 @@ public class BoardOSCinputs : MonoBehaviour
     }
     void controllByOSCmessage(string addres, string value){
         switch(addres){
-            case "test/":
+            case "resp/":
             Debug.Log(value);
                 boardManager.showResponse(int.Parse(value));
             break;
