@@ -51,6 +51,45 @@
            {"name":"El Payaso","points":23}
          ]
       }
+    ],
+    "FastMoney":[
+      {
+        "question":"Que es lo primero que haces al llegar a la iglesia",
+        "resp":[
+          {"name":"Saludar","points":70},
+          {"name":"Orar", "points":25},
+          {"name":"Guardar mi bolso", "points":15}
+        ]
+      },
+      {
+        "question":"Cuando Se termina el servicio que haces",
+        "resp":[
+          {"name":"Guardar Cables","points":70},
+          {"name":"Saludar", "points":25},
+          {"name":"ir a comprar", "points":15}
+        ]
+      },{
+        "question":"Que buscan los solteros de la iglesia",
+        "resp":[
+          {"name":"Este en la alabanza","points":70},
+          {"name":"Sepa cocinar", "points":25},
+          {"name":"Sea la hija del pastor", "points":15}
+        ]
+      },{
+        "question":"Canciones favoritas del pastor",
+        "resp":[
+          {"name":"Renuevame","points":70},
+          {"name":"Mas el Dios", "points":25},
+          {"name":"Salmo 31", "points":15}
+        ]
+      },{
+        "question":"Cosas que molestan al pastor",
+        "resp":[
+          {"name":"Volumen Fuerte","points":70},
+          {"name":"Telefono sonando", "points":25},
+          {"name":"Testirollos", "points":15}
+        ]
+      }
     ]
  }
  
