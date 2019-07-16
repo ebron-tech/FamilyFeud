@@ -21,6 +21,17 @@ namespace round
         public string RoundName { get; set; }
         [JsonProperty("rounds")]
         public RoundElement[] Rounds { get; set; }
+        [JsonProperty("FastMoney")]
+        public FastMoney[] FastMoney { get; set; }
+    }
+
+    public partial class FastMoney
+    {
+        [JsonProperty("question")]
+        public string Question { get; set; }
+
+        [JsonProperty("resp")]
+        public Resp[] Resp { get; set; }
     }
 
     public partial class RoundElement
