@@ -6,26 +6,27 @@ using UnityEngine.EventSystems;// Required when using Event data.
 
 public class AutoComplete : MonoBehaviour
 {   
-    public GameObject empyGO;
+    public GameObject AutoCompleteElement;
     public GameObject anchor;
     public UnityEngine.UI.Button sendButton;
-    List<string> words;
     List<string>[] respo;
     List<GameObject> VisualWords;
     public QuestionAnwswerContainer[] questionObj;
 
     Round[] rounds;
     List<string>[] quesWords;
+    DashboardSendOSC sendOSC;
+    string[] finalResponses;
     void Start(){
-        rounds =util.getRoundsFromFolder("rounds");        
+        rounds =util.getRoundsFromFolder("rounds");       
+        sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>(); 
         FastMoney[] f = rounds[0].FastMoney;
         finalResponses  = new string[10];
         quesWords= new List<string>[f.Length];
+        VisualWords = new List<GameObject>();
         for(int i =0; i<f.Length;i++){
             quesWords[i]= new List<string>();
         }
-
-        words =new List<string>();
         if(f.Length==5){
             for(int i =0; i<5;i++){
                 questionObj[i].question.text=f[i].Question;
@@ -37,14 +38,7 @@ public class AutoComplete : MonoBehaviour
             }
         }
 
-        VisualWords = new List<GameObject>();
-        words.Add("Hello");
-        words.Add("Darknes");
-        words.Add("My");
-        words.Add("Old Friend");
-        words.Add("Something ");
-        words.Add("Else ");
-        words.Add("behind the Text");
+        
         questionObj[0].textField.Select();
         //input = gameObject.GetComponent<TMPro.TMP_InputField>();
     }
@@ -59,35 +53,44 @@ public class AutoComplete : MonoBehaviour
         }
 //        Debug.Log(VisualWords.Count);
         VisualWords.Clear();
-        List<string> found = quesWords[id].FindAll( w => w.Contains(questionObj[id].textField.text.ToUpper()) );
-        TopValue = (found.Count>0)?found[0]:questionObj[id].textField.text;
+        List<string> found = quesWords[id].FindAll( w => w.Contains(questionObj[selectedID].textField.text.ToUpper()) );
+        TopValue = (found.Count>0)?found[0]:questionObj[selectedID].textField.text.ToUpper();
         foreach(string s in found){
            instantiateTxt(s);
        }
     }
     
     void instantiateTxt(string str){
-        GameObject auxobj= Instantiate(empyGO,Vector3.zero,Quaternion.identity);
-        auxobj.AddComponent<TMPro.TextMeshProUGUI>().text=str;
+        GameObject auxobj= Instantiate(AutoCompleteElement,Vector3.zero,Quaternion.identity);
+        auxobj.GetComponent<TMPro.TextMeshProUGUI>().text=str;
         auxobj.transform.SetParent(anchor.transform);
         auxobj.transform.position=Vector3.zero;
         VisualWords.Add(auxobj);
     }
 
-    string[] finalResponses;
-    void addToList(){
-
-    }
+    
     void Update(){
         if(Input.GetKeyDown(KeyCode.Tab)){
             finalResponses[selectedID]=TopValue;           
             questionObj[selectedID].textField.text=TopValue;
-            if((selectedID+1)<9){
+            questionObj[selectedID].button.interactable=true;
+
+            if((selectedID+1)<10){
                 questionObj[selectedID+1].textField.Select();
             }else{
                 sendButton.Select();
             }
-
         }
+        if(Input.GetKeyDown(KeyCode.Return)){
+            sendRespsViaOSC();
+        }
+    }
+
+    void sendRespsViaOSC(){
+
+
+        List<string> l=new List<string>();
+        l.AddRange(finalResponses);
+        sendOSC.sendFastMoneyAnswrs(l);
     }
 }
