@@ -68,7 +68,7 @@ public class AutoComplete : MonoBehaviour
         VisualWords.Add(auxobj);
     }
 
-    
+    bool isEnterSelected;
     void Update(){
         if(Input.GetKeyDown(KeyCode.Tab)){
             finalResponses[selectedID]=TopValue;           
@@ -77,18 +77,18 @@ public class AutoComplete : MonoBehaviour
 
             if((selectedID+1)<10){
                 questionObj[selectedID+1].textField.Select();
+                isEnterSelected=false;
             }else{
                 sendButton.Select();
+                isEnterSelected=true;
             }
         }
-        if(Input.GetKeyDown(KeyCode.Return)){
-            sendRespsViaOSC();
+        if(Input.GetKeyDown(KeyCode.Return)&&!isEnterSelected){// when the button is selected avoid to send the message twice pressing return.
+                sendRespsViaOSC();
         }
     }
 
-    void sendRespsViaOSC(){
-
-
+    public void sendRespsViaOSC(){
         List<string> l=new List<string>();
         l.AddRange(finalResponses);
         sendOSC.sendFastMoneyAnswrs(l);
