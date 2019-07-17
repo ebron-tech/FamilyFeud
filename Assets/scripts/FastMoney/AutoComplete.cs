@@ -58,6 +58,7 @@ public class AutoComplete : MonoBehaviour
         foreach(string s in found){
            instantiateTxt(s);
        }
+       isTextInputSelected=true;
     }
     
     void instantiateTxt(string str){
@@ -69,6 +70,10 @@ public class AutoComplete : MonoBehaviour
     }
 
     bool isEnterSelected;
+    public bool isTextInputSelected;
+    public void deselectedText(){
+        isTextInputSelected=false;
+    }
     void Update(){
         if(Input.GetKeyDown(KeyCode.Tab)){
             finalResponses[selectedID]=TopValue;           

@@ -11,6 +11,7 @@ public class QuestionAnwswerContainer : MonoBehaviour
     public UnityEngine.UI.Button button;
     KeyCode keyPressed;
     DashboardSendOSC sendOSC;
+    public AutoComplete completeController;
     void Update(){
         if(Input.GetKeyDown(keyPressed)){
             showResp();
@@ -25,7 +26,7 @@ public class QuestionAnwswerContainer : MonoBehaviour
     }
     public void showResp(){
         //txtAnswer.color=Color.white;
-        if(button.interactable==true){
+        if(button.interactable==true && !completeController.isTextInputSelected){
             textField.gameObject.GetComponent<UnityEngine.UI.Image>().color= Color.green;
     //      sendOSC.selectAnswr(id);
             Debug.Log("buttonpressed:"+ id);
