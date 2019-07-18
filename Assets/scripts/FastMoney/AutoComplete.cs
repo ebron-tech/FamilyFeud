@@ -47,7 +47,7 @@ public class AutoComplete : MonoBehaviour
     public void checkRefs(int id){
         selectedID=id;
         id=Mathf.RoundToInt(Mathf.Repeat(id,5));
-        Debug.Log(selectedID +""+id);
+        //Debug.Log(selectedID +""+id);
         foreach (Transform child in anchor.transform) {
             GameObject.Destroy(child.gameObject);
         }

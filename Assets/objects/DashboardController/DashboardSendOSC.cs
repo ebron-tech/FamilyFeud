@@ -9,6 +9,7 @@ public class DashboardSendOSC : MonoBehaviour
     public int port =9001;
     void Awake(){
         OSCHandler.Instance.Init("controller",address,port);
+        GameObject.DontDestroyOnLoad(this);
     }
     void Start(){
     

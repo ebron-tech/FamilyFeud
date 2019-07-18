@@ -23,7 +23,6 @@ public class SessionsButton : MonoBehaviour
         sessionId = id;
         sessionName = name;
         controller = dc;
-
         txtSessionName.text=name;
     }
 

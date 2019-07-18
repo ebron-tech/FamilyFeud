@@ -37,7 +37,7 @@ public class DashboardController : MonoBehaviour
             SessionsButton auxObj = Instantiate(sessionBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<SessionsButton>();
             auxObj.init(i,"session-"+i,this);
             auxObj.transform.SetParent(sessionPannel.gameObject.transform);
-
+            auxObj.transform.localScale=Vector3.one;
             sessionObjs.Add(auxObj);
         }
     }
@@ -50,6 +50,7 @@ public class DashboardController : MonoBehaviour
             RoundsButton auxObj = Instantiate(roundsBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<RoundsButton>();
             auxObj.init(sessionID,i,txtQuestion.text=sessions[sessionID].Rounds[i].Question,this);
             auxObj.transform.SetParent(roundsPannel.gameObject.transform);
+            auxObj.transform.localScale=Vector3.one;
             roundObjs.Add(auxObj);
         }
     }
@@ -57,8 +58,10 @@ public class DashboardController : MonoBehaviour
         txtQuestion.text=rE.Question;
         for( int i=0; i<rE.Resp.Length;i++){
             Answerbutton auxObj = Instantiate(respBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<Answerbutton>();
-            auxObj.init(i,rE.Resp[i].Name,rE.Resp[i].Points);
+            auxObj.init(i,(i+1)+"-"+rE.Resp[i].Name,rE.Resp[i].Points);
+           // auxObj.GetComponent<UnityEngine.UI.Image>().rectTransform.localScale=Vector3.one;
             auxObj.transform.SetParent(respPannel.transform);
+            auxObj.transform.localScale=Vector3.one;
             anwsrObjs.Add(auxObj);
         }
     }

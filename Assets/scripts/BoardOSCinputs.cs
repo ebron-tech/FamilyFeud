@@ -21,20 +21,27 @@ public class BoardOSCinputs : MonoBehaviour
     void Update()
     {
         for(int i=0; i<OSCHandler.Instance.packets.Count;i++){
-            controllByOSCmessage(OSCHandler.Instance.packets[i].Address,System.Convert.ToString(OSCHandler.Instance.packets[i].Data[0]));
+           // controllByOSCmessage(OSCHandler.Instance.packets[i].Address,System.Convert.ToString(OSCHandler.Instance.packets[i].Data[0]));
+            controllByOSCmessage(OSCHandler.Instance.packets[i].Address,OSCHandler.Instance.packets[i].Data);
             OSCHandler.Instance.packets.RemoveAt(i);
         }
             
     }
-    void controllByOSCmessage(string addres, string value){
+    void controllByOSCmessage(string addres, List<object> values){
         switch(addres){
             case "resp/":
-            Debug.Log(value);
-                boardManager.showResponse(int.Parse(value));
+                Debug.Log(values[0]);
+                boardManager.showResponse(int.Parse(System.Convert.ToString(values[0])));
             break;
             case "round/":
             break;
             case "action/":
+            break;
+            case "fmAnswrs/":
+                //setNewAnswersObjs
+                foreach(object o in values){
+                    Debug.Log(o);
+                }
             break;
             default:
                 Debug.Log("DefaultCase: "+addres);
