@@ -47,6 +47,13 @@ public class DashboardSendOSC : MonoBehaviour
     //   client.Send("/answr",id);
         Debug.Log("SendOSC: fmAnswrs "+answs);
     }
+    public void sendStrikes(int strikeCount){
+        OSCHandler.Instance.SendMessageToClient("controller","strike/",strikeCount);
+    }
+    public void assginWinner(string winnerSide){
+        OSCHandler.Instance.SendMessageToClient("controller","winner/",winnerSide);
+    }
+    
 
     void OnApplicationQuit(){
    //     client.Dispose();

@@ -43,6 +43,10 @@ public class BoardOSCinputs : MonoBehaviour
                     Debug.Log(o);
                 }
             break;
+            case "winner/":
+            break;
+            case "strike/":
+            break;
             default:
                 Debug.Log("DefaultCase: "+addres);
             break;
