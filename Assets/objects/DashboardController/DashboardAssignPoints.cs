@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashboardAssignPoints : MonoBehaviour
 {
     DashboardSendOSC sendOSC;
-
+    public DashboardController controller;
     public UnityEngine.UI.Button L_button;
     public UnityEngine.UI.Button R_button;
     public UnityEngine.UI.Button assign_button;
@@ -47,6 +47,7 @@ public class DashboardAssignPoints : MonoBehaviour
         if(activeButton!=""){
            // sendOSC.assginWinner(activeButton);
             deselectButtons();
+         //   controller.loadNextRound();
         }else{
             L_button.GetComponent<UnityEngine.UI.Image>().color=Color.gray;
             R_button.GetComponent<UnityEngine.UI.Image>().color=Color.gray;

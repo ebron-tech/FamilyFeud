@@ -11,7 +11,7 @@ public class RoundsButton : MonoBehaviour
     DashboardController controller;
     float doubleClickCnt;
     void Start(){
-        imgBG = gameObject.GetComponent<UnityEngine.UI.Image>();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class RoundsButton : MonoBehaviour
         roundId=RoundId;
         question= Question;
         txtQuestion.text= question;
+        imgBG = gameObject.GetComponent<UnityEngine.UI.Image>();
     }
     public void activate(){
         //controller.InstantiateAnswers();

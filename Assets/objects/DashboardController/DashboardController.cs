@@ -13,6 +13,7 @@ public class DashboardController : MonoBehaviour
     List<Answerbutton> anwsrObjs;
     List<RoundsButton> roundObjs;
 
+    int sessionID,roundID;
     void Awake(){
         sessionObjs = new List<SessionsButton>();
         anwsrObjs = new List<Answerbutton>();
@@ -33,6 +34,7 @@ public class DashboardController : MonoBehaviour
     }
 
     void initSessions(){
+        cleanSessionObjs();
         for(int i =0; i< sessions.Length;i++){
             SessionsButton auxObj = Instantiate(sessionBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<SessionsButton>();
             auxObj.init(i,"session-"+i,this);
@@ -45,16 +47,18 @@ public class DashboardController : MonoBehaviour
         
     }
     void instantiateRounds(int sessionID){
-        
+        cleanRoundObjs();
         for(int i =0; i< sessions[sessionID].Rounds.Length;i++){
             RoundsButton auxObj = Instantiate(roundsBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<RoundsButton>();
             auxObj.init(sessionID,i,txtQuestion.text=sessions[sessionID].Rounds[i].Question,this);
             auxObj.transform.SetParent(roundsPannel.gameObject.transform);
             auxObj.transform.localScale=Vector3.one;
+            if(roundID==i){auxObj.activate();}
             roundObjs.Add(auxObj);
         }
     }
     void instantiateResp(RoundElement rE){
+        cleanAnwsObjs();
         txtQuestion.text=rE.Question;
         for( int i=0; i<rE.Resp.Length;i++){
             Answerbutton auxObj = Instantiate(respBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<Answerbutton>();
@@ -65,4 +69,44 @@ public class DashboardController : MonoBehaviour
             anwsrObjs.Add(auxObj);
         }
     }
+    void instantiateResp(int id){
+        instantiateResp(sessions[sessionID].Rounds[id]);
+    }
+
+    void nextRound(){
+        if(roundID<sessions[sessionID].Rounds.Length-1){
+            roundID++;
+        }else{
+            if(sessionID<sessions.Length-1){
+             //   sessionID++;
+            }
+        }
+        
+    }
+    void cleanSessionObjs(){
+        for(int i =0; i<sessionObjs.Count;i++){
+            GameObject.Destroy(sessionObjs[i].gameObject);
+        }
+        sessionObjs.Clear();
+        sessionObjs=null;
+        sessionObjs = new List<SessionsButton>();
+    }
+     void cleanRoundObjs(){
+        for(int i =0; i<roundObjs.Count;i++){
+            GameObject.Destroy(roundObjs[i].gameObject);
+        }
+        roundObjs.Clear();
+        roundObjs=null;
+        roundObjs = new List<RoundsButton>();
+    }
+
+    void cleanAnwsObjs(){
+        for(int i =0; i<anwsrObjs.Count;i++){
+            GameObject.Destroy(anwsrObjs[i].gameObject);
+        }
+        anwsrObjs.Clear();
+        anwsrObjs=null;
+        anwsrObjs = new List<Answerbutton>();
+    }
+    
 }
