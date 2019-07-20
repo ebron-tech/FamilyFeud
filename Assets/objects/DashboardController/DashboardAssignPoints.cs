@@ -45,9 +45,9 @@ public class DashboardAssignPoints : MonoBehaviour
     }
     public void assginPointsOCS(){
         if(activeButton!=""){
-           // sendOSC.assginWinner(activeButton);
+            sendOSC.assginWinner(activeButton);
             deselectButtons();
-         //   controller.loadNextRound();
+            //controller.loadNextRound();
         }else{
             L_button.GetComponent<UnityEngine.UI.Image>().color=Color.gray;
             R_button.GetComponent<UnityEngine.UI.Image>().color=Color.gray;

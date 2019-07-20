@@ -9,8 +9,8 @@ public class BoardOSCinputs : MonoBehaviour
     public int port =9001;
     //OscServer server;
     void Awake(){
-        boardManager = gameObject.GetComponent<BoardManager>();
         OSCHandler.Instance.Init("server",port);
+        boardManager = gameObject.GetComponent<BoardManager>();
 
     }
     void OnApplicationQuit(){
@@ -21,7 +21,7 @@ public class BoardOSCinputs : MonoBehaviour
     void Update()
     {
         for(int i=0; i<OSCHandler.Instance.packets.Count;i++){
-           // controllByOSCmessage(OSCHandler.Instance.packets[i].Address,System.Convert.ToString(OSCHandler.Instance.packets[i].Data[0]));
+            //controllByOSCmessage(OSCHandler.Instance.packets[i].Address,System.Convert.ToString(OSCHandler.Instance.packets[i].Data[0]));
             controllByOSCmessage(OSCHandler.Instance.packets[i].Address,OSCHandler.Instance.packets[i].Data);
             OSCHandler.Instance.packets.RemoveAt(i);
         }
@@ -33,9 +33,13 @@ public class BoardOSCinputs : MonoBehaviour
                 Debug.Log(values[0]);
                 boardManager.showResponse(int.Parse(System.Convert.ToString(values[0])));
             break;
-            case "round/":
+            case "winner/":
+                Debug.Log("Server-TakeThePoints:"+values[0]);
+                boardManager.takeThePoints(System.Convert.ToString(values[0]));
             break;
-            case "action/":
+            case "strike/":
+                Debug.Log("Server- strike:"+values[0]);
+                boardManager.strike(System.Convert.ToInt32(values[0]));
             break;
             case "fmAnswrs/":
                 //setNewAnswersObjs
@@ -43,12 +47,19 @@ public class BoardOSCinputs : MonoBehaviour
                     Debug.Log(o);
                 }
             break;
-            case "winner/":
+            case "loadRound/":
+                string str= System.Convert.ToString(values[0]);
+                int session = int.Parse( str.Split(',')[0]);
+                int round = int.Parse(str.Split(',')[1]);
+                boardManager.loadQuestionsByIds(session,round);
             break;
-            case "strike/":
+            case "repeated/":
+                Debug.Log("Server-repeatedAudio()");
+                boardManager.repeatedAnswer();
             break;
+            
             default:
-                Debug.Log("DefaultCase: "+addres);
+                Debug.Log("Server-DefaultCase: "+addres);
             break;
         }
     }

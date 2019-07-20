@@ -56,10 +56,10 @@ public class BoardManagerInputs : MonoBehaviour
         }else{
             //Assing points to team
             if(Input.GetKeyDown(KeyCode.LeftArrow)){
-                boardManager.takeThePoints(1);
+                boardManager.takeThePoints("L");
             }
             if(Input.GetKeyDown(KeyCode.RightArrow)){
-                boardManager.takeThePoints(2);
+                boardManager.takeThePoints("R");
             }
         }
 

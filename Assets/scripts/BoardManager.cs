@@ -48,7 +48,7 @@ public class BoardManager : MonoBehaviour
     //   value:
     //     sesionId = the id of the session ( the file )
     //     roundId = the id for the round
-    private void loadQuestionsByIds(int sessionId, int roundId){
+    public  void loadQuestionsByIds(int sessionId, int roundId){
         if(sessionId<sessions.Length){
             if(roundId<sessions[sessionId].Rounds.Length){
                 clearResp();
@@ -119,16 +119,16 @@ public class BoardManager : MonoBehaviour
     //     select the team who wins the points. 
     //      1=Left Team.
     //      2=Right Team.
-    public void takeThePoints(int team){
+    public void takeThePoints(string team){
         if(!pointsGivedToTeam){
             strikes=0;
             switch(team){
-                case 1:
+                case "L":
                     leftPoints+=currentPoints;
                     visualBoard.updateLeftPoints(leftPoints);
                     pointsGivedToTeam=true;
                     break;
-                case 2:
+                case "R":
                     rightPoints+=currentPoints;
                     visualBoard.updateRightPoints(rightPoints);
                     pointsGivedToTeam=true;
@@ -163,6 +163,12 @@ public class BoardManager : MonoBehaviour
             audioSrc.Play();
             Debug.Log(strikes);
         }
+    }
+    public void strike(int count){
+        strikeCtl.triggerStrike(count);
+        audioSrc.clip=sounds[1];
+        audioSrc.Play();
+        Debug.Log(strikes);
     }
 
 }

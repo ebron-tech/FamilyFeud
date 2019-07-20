@@ -28,13 +28,13 @@ int strikesCount;
         }
     }
     public void ActivateSingleStrike(){
-        //sendOSC.sendStrikes(1);
+        sendOSC.sendStrikes(1);
         Debug.Log("singleStrike");
     }
     public void ActivateStrike(){
         Debug.Log("Strike");
         strikesCount++;
-       // sendOSC.sendStrikes(strikesCount);
+        sendOSC.sendStrikes(strikesCount);
         strikesCountTxt.text="x"+strikesCount;
     }
 
