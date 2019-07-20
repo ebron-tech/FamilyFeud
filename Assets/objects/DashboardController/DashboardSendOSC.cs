@@ -53,6 +53,10 @@ public class DashboardSendOSC : MonoBehaviour
     public void assginWinner(string winnerSide){
         OSCHandler.Instance.SendMessageToClient("controller","winner/",winnerSide);
     }
+    public void loadRound(int session,int round){
+       // OSCHandler.Instance.SendMessageToClient("controller","loadRound",session+","+round);
+       Debug.Log("loadScene:"+session+","+round);
+    }
     
 
     void OnApplicationQuit(){

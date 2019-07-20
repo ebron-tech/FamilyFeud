@@ -32,13 +32,18 @@ public class RoundsButton : MonoBehaviour
         txtQuestion.color=Color.white;
         imgBG.color=Color.green;
     }
+    public void loadResp(){
+        Debug.Log("RoundLoadResp");
+        controller.instantiateRounds(roundId);
+        //controller.instantiateResp(roundId);
+    }
     public void cleanColor(){
         txtQuestion.color=Color.black;
         imgBG.color=Color.grey;
     }
     public void click(){
-        if((Time.time-doubleClickCnt) <0.4f){ //if doubleclick
-            activate();
+        if((Time.time-doubleClickCnt) <0.6f){ //if doubleclick
+            loadResp();
             doubleClickCnt=0;
         }else{
             doubleClickCnt=Time.time;

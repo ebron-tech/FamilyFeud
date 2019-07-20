@@ -12,6 +12,7 @@ public class DashboardController : MonoBehaviour
     List<SessionsButton> sessionObjs;
     List<Answerbutton> anwsrObjs;
     List<RoundsButton> roundObjs;
+    DashboardSendOSC sendOSC;
 
     int sessionID,roundID;
     void Awake(){
@@ -19,13 +20,16 @@ public class DashboardController : MonoBehaviour
         anwsrObjs = new List<Answerbutton>();
         roundObjs = new List<RoundsButton>();
         sessions = util.getRoundsFromFolder("rounds");
+        sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>();
     }
 
     void Start(){
-        initSessions();
-        instantiateSessions(0);
-        instantiateRounds(0);
-        instantiateResp(sessions[0].Rounds[0]);
+        sessionID=2;
+        roundID=3;
+        intsantiateSessions(sessionID);
+        Debug.Log("ControllerStart");
+       // instantiateRounds(roundID);
+       // instantiateResp(sessions[sessionID].Rounds[roundID]);
     }
     // Update is called once per frame
     void Update()
@@ -33,20 +37,26 @@ public class DashboardController : MonoBehaviour
         
     }
 
-    void initSessions(){
+    public void intsantiateSessions(int sessionId){
+        Debug.Log("intsantiateSessions");
+        sessionID=sessionId;
+        roundID=0;
         cleanSessionObjs();
         for(int i =0; i< sessions.Length;i++){
             SessionsButton auxObj = Instantiate(sessionBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<SessionsButton>();
             auxObj.init(i,"session-"+i,this);
+            if(i==sessionId){auxObj.activate();}
             auxObj.transform.SetParent(sessionPannel.gameObject.transform);
             auxObj.transform.localScale=Vector3.one;
             sessionObjs.Add(auxObj);
         }
-    }
-    void instantiateSessions(int sessionID){
+        instantiateRounds(roundID);
         
     }
-    void instantiateRounds(int sessionID){
+
+    public void instantiateRounds(int roundId){
+        Debug.Log("instantiateRounds");
+        roundID=roundId;
         cleanRoundObjs();
         for(int i =0; i< sessions[sessionID].Rounds.Length;i++){
             RoundsButton auxObj = Instantiate(roundsBtnPfb,Vector3.zero,Quaternion.identity).GetComponent<RoundsButton>();
@@ -56,8 +66,11 @@ public class DashboardController : MonoBehaviour
             if(roundID==i){auxObj.activate();}
             roundObjs.Add(auxObj);
         }
+        instantiateResp(roundID);
+        
     }
-    void instantiateResp(RoundElement rE){
+   public  void instantiateResp(RoundElement rE){
+       Debug.Log("instantiateResp");
         cleanAnwsObjs();
         txtQuestion.text=rE.Question;
         for( int i=0; i<rE.Resp.Length;i++){
@@ -68,8 +81,11 @@ public class DashboardController : MonoBehaviour
             auxObj.transform.localScale=Vector3.one;
             anwsrObjs.Add(auxObj);
         }
+        sendOSC.loadRound(sessionID,roundID);
+        
     }
-    void instantiateResp(int id){
+    public void instantiateResp(int id){
+        roundID=id;
         instantiateResp(sessions[sessionID].Rounds[id]);
     }
 
@@ -107,6 +123,9 @@ public class DashboardController : MonoBehaviour
         anwsrObjs.Clear();
         anwsrObjs=null;
         anwsrObjs = new List<Answerbutton>();
+    }
+    void cleanListObjs(List<object> o){
+
     }
     
 }

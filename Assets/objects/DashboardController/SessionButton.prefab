@@ -120,12 +120,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6865779326041151139}
-        m_MethodName: 
+      - m_Target: {fileID: 2526645404541620891}
+        m_MethodName: click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtSessionName: {fileID: 1814334583713261675}
+  buttonSession: {fileID: 0}
   sessionName: 
   sessionId: 0
 --- !u!1 &7763118659645984819
