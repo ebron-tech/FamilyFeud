@@ -17,10 +17,11 @@ public class AutoComplete : MonoBehaviour
     List<string>[] quesWords;
     DashboardSendOSC sendOSC;
     string[] finalResponses;
-    void Start(){
+    public int sessionID;
+    public void Start(){
         rounds =util.getRoundsFromFolder("rounds");       
         sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>(); 
-        FastMoney[] f = rounds[0].FastMoney;
+        FastMoney[] f = rounds[sessionID].FastMoney;
         finalResponses  = new string[10];
         quesWords= new List<string>[f.Length];
         VisualWords = new List<GameObject>();
@@ -30,18 +31,17 @@ public class AutoComplete : MonoBehaviour
         if(f.Length==5){
             for(int i =0; i<5;i++){
                 questionObj[i].question.text=f[i].Question;
-                Debug.Log(i+","+(i+5));
+            //    Debug.Log(i+","+(i+5));
                 questionObj[i+5].question.text=f[i].Question;
                 foreach(Resp r in f[i].Resp){
                     quesWords[i].Add(r.Name.ToUpper()+","+r.Points);
                 }
             }
         }
-
-        
         questionObj[0].textField.Select();
         //input = gameObject.GetComponent<TMPro.TMP_InputField>();
     }
+    
     string TopValue;
     int selectedID;
     public void checkRefs(int id){

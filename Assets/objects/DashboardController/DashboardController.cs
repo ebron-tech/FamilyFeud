@@ -14,7 +14,7 @@ public class DashboardController : MonoBehaviour
     List<RoundsButton> roundObjs;
     DashboardSendOSC sendOSC;
 
-    int sessionID,roundID;
+    public int sessionID,roundID;
     void Awake(){
         sessionObjs = new List<SessionsButton>();
         anwsrObjs = new List<Answerbutton>();
