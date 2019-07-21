@@ -6,9 +6,10 @@ public class DashboardCanvasSwitch : MonoBehaviour
 {
     public GameObject DashboardCanvas, fastMoneyCanvas;
     public bool isFastMoneyTime;
-
+    DashboardSendOSC sendOSC;
     void Start()
     {
+        sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>(); 
         DashboardCanvas.SetActive(true);
         fastMoneyCanvas.SetActive(false);
     }
@@ -26,10 +27,12 @@ public class DashboardCanvasSwitch : MonoBehaviour
         fastMoneyCanvas.GetComponent<AutoComplete>().sessionID=currentSession;
         fastMoneyCanvas.GetComponent<AutoComplete>().Start();
         isFastMoneyTime=true;
+        sendOSC.changeScene(1);
     }
     public void goToDashboard(){
         fastMoneyCanvas.SetActive(false);
         DashboardCanvas.SetActive(true);
         isFastMoneyTime=false;
+        sendOSC.changeScene(0);
     }
 }

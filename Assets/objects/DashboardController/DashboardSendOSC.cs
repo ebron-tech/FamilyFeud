@@ -57,6 +57,11 @@ public class DashboardSendOSC : MonoBehaviour
        OSCHandler.Instance.SendMessageToClient("controller","loadRound/",session+","+round);
        Debug.Log("loadScene:"+session+","+round);
     }
+    public void changeScene(int i){
+        OSCHandler.Instance.SendMessageToClient("controller","changeScene/",i);
+        Debug.Log("goFastMoney:"+i);
+        
+    }
     public void repeated(int i =1){
         OSCHandler.Instance.SendMessageToClient("controller","repeated/",i);
     } 

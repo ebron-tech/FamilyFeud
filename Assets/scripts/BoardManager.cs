@@ -84,7 +84,7 @@ public class BoardManager : MonoBehaviour
     }
      // Summary:
     //     Cleans the response boxes, removes from scene, and clean the respObjects List
-    private void clearResp(){
+    public  void clearResp(){
         if(respObjects!=null){
             foreach(RespObject r in respObjects){
                 GameObject.Destroy(r.gameObject);

@@ -6,6 +6,7 @@ public class BoardOSCinputs : MonoBehaviour
 {
     // Start is called before the first frame update
     BoardManager boardManager;
+    public FastMoneyController fmoneyController;
     public int port =9001;
     //OscServer server;
     void Awake(){
@@ -42,7 +43,7 @@ public class BoardOSCinputs : MonoBehaviour
                 boardManager.strike(System.Convert.ToInt32(values[0]));
             break;
             case "fmAnswrs/":
-                //setNewAnswersObjs
+                fmoneyController.populateResp(values);
                 foreach(object o in values){
                     Debug.Log(o);
                 }
@@ -56,6 +57,17 @@ public class BoardOSCinputs : MonoBehaviour
             case "repeated/":
                 Debug.Log("Server-repeatedAudio()");
                 boardManager.repeatedAnswer();
+            break;
+            case "changeScene/":
+            Debug.Log("Server-changeScene"+System.Convert.ToInt32(values[0]));
+                switch(System.Convert.ToInt32(values[0])){
+                    case 0:
+                    break;
+                        fmoneyController.disableFastMoneu();
+                    case 1: 
+                        fmoneyController.activateFastMoney();
+                    break;
+                }
             break;
             
             default:
