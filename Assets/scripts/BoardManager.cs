@@ -77,7 +77,7 @@ public class BoardManager : MonoBehaviour
             auxObj.setValues(i+1,r[i].Name,r[i].Points);
             respObjects.Add(auxObj);
             //Each element is instantiated with a unique position, 
-            //the RespObject is stored in to a temporal variable 
+            //the RespObject is stored in to apwd temporal variable 
             //in order to initialize each box with the response and the points
             //the tmp variable is stored inside one list.
         }
