@@ -100,7 +100,7 @@ public class BoardManager : MonoBehaviour
     //      Recieves the index of each response and show it, 
     //      plays the sound, add the points to CurrentPoints variable and updates the visual text.
     public void showResponse(int id){
-        if(id<respObjects.Count){
+        if(id<respObjects.Count && respObjects.Count>0){
             if( respObjects[id].showResponse()){
                 audioSrc.clip=sounds[0];
                 audioSrc.Play();

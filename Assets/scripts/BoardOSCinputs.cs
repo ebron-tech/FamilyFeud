@@ -62,7 +62,7 @@ public class BoardOSCinputs : MonoBehaviour
             Debug.Log("Server-changeScene"+System.Convert.ToInt32(values[0]));
                 switch(System.Convert.ToInt32(values[0])){
                     case 0:
-                        fmoneyController.disableFastMoneu();
+                        fmoneyController.disableFastMenu();
                     break;
                     case 1: 
                         fmoneyController.activateFastMoney();

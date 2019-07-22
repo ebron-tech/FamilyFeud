@@ -9,7 +9,7 @@ public class respFastMoney : MonoBehaviour
 	
 	Animation rotateShow;
 	int points;
-    int status;
+    public int status;
     void Start()
     {
            respText.gameObject.SetActive(false);
@@ -25,26 +25,32 @@ public class respFastMoney : MonoBehaviour
     public bool showResponse(){
         if(status==0){
             respText.gameObject.SetActive(true);
+            status++;
+            return false;
         }else if(status==1){
             respPoints.gameObject.SetActive(true);
+            status++;
+            return true;
         }else{
-            return false;
+            respText.gameObject.SetActive(true);
+            respPoints.gameObject.SetActive(true);
         }
-        status++;
-        return true;
+        
+        return false;
+    
     }
 
     public int getPoints(){
-        if(status>0){
             return points;
-        }else{
-            return 0;
-        }
     }
-
+    public void hideResp(){
+        respText.gameObject.SetActive(false);
+        respPoints.gameObject.SetActive(false);
+    }
     public void setValues(string s, int p){
         respText.text=s;
         points = p;
         respPoints.text = p+"";
+        hideResp();
     }
 }
