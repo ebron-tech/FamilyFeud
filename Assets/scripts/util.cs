@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -16,8 +16,8 @@ public class util : MonoBehaviour {
 		string folderPath="";
 		#if UNITY_EDITOR
 		folderPath = Application.dataPath + "/StreamingAssets/"+folderName+"/";
-		#elif UNITY_WINRT
-		folderPath = Application.dataPath + "/"+folderName+"/"; //.exe file is next to the folder.
+		#elif UNITY_STANDALONE_WIN
+		folderPath = Application.dataPath + "/../"+folderName+"/"; //.exe file is next to the folder.
 		#elif UNITY_STANDALONE_OSX
 		folderPath = new DirectoryInfo(Application.dataPath).Parent.Parent.ToString()+"/"+folderName+"/"; //OSX the path is inside the .app, this change the path 2 levels up in order to access the 
 		#endif
@@ -26,6 +26,7 @@ public class util : MonoBehaviour {
 	}
 	//getDataFilesFromPath gets the .json files files from path
 	public static string[] getJsonFilesFromPath(string folderPath){
+		Debug.Log("Win:"+folderPath);
 		DirectoryInfo info = new DirectoryInfo(folderPath);
 		FileInfo[] files= info.GetFiles();
 		//string[] filesStr= new string[files.Length];
