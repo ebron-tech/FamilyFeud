@@ -26,7 +26,7 @@ public class util : MonoBehaviour {
 	}
 	//getDataFilesFromPath gets the .json files files from path
 	public static string[] getJsonFilesFromPath(string folderPath){
-		Debug.Log("Win:"+folderPath);
+		//Debug.Log("Win:"+folderPath);
 		DirectoryInfo info = new DirectoryInfo(folderPath);
 		FileInfo[] files= info.GetFiles();
 		//string[] filesStr= new string[files.Length];

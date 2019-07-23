@@ -33,6 +33,7 @@ public class BoardOSCinputs : MonoBehaviour
             case "resp/":
                 Debug.Log(values[0]);
                 boardManager.showResponse(int.Parse(System.Convert.ToString(values[0])));
+                fmoneyController.showResponse(int.Parse(System.Convert.ToString(values[0])));
             break;
             case "winner/":
                 Debug.Log("Server-TakeThePoints:"+values[0]);
@@ -47,6 +48,9 @@ public class BoardOSCinputs : MonoBehaviour
                 foreach(object o in values){
                     Debug.Log(o);
                 }
+            break;
+            case "hidefm/":
+                fmoneyController.hideResp();
             break;
             case "loadRound/":
                 string str= System.Convert.ToString(values[0]);

@@ -47,6 +47,9 @@ public class DashboardSendOSC : MonoBehaviour
     //   client.Send("/answr",id);
         Debug.Log("SendOSC: fmAnswrs "+answs);
     }
+    public void hideFastMoneyResp(){
+        OSCHandler.Instance.SendMessageToClient("controller","hidefm/",1);
+    }
     public void sendStrikes(int strikeCount){
         OSCHandler.Instance.SendMessageToClient("controller","strike/",strikeCount);
     }

@@ -51,6 +51,7 @@ public class BoardManager : MonoBehaviour
     public  void loadQuestionsByIds(int sessionId, int roundId){
         if(sessionId<sessions.Length){
             if(roundId<sessions[sessionId].Rounds.Length){
+                visualBoard.updateCurrentPoints(currentPoints=0);
                 clearResp();
                 instantiateResp(sessions[sessionId].Rounds[roundId].Resp);
             }else{

@@ -23,6 +23,9 @@ public class AutoComplete : MonoBehaviour
         sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>(); 
         FastMoney[] f = rounds[sessionID].FastMoney;
         finalResponses  = new string[10];
+        for(int i =0;i<10;i++){
+            finalResponses[i]="";
+        }
         quesWords= new List<string>[f.Length];
         VisualWords = new List<GameObject>();
         for(int i =0; i<f.Length;i++){
@@ -60,7 +63,7 @@ public class AutoComplete : MonoBehaviour
        }
        isTextInputSelected=true;
     }
-    
+
     void instantiateTxt(string str){
         GameObject auxobj= Instantiate(AutoCompleteElement,Vector3.zero,Quaternion.identity);
         auxobj.GetComponent<TMPro.TextMeshProUGUI>().text=str;
@@ -91,11 +94,19 @@ public class AutoComplete : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return)&&!isEnterSelected){// when the button is selected avoid to send the message twice pressing return.
                 sendRespsViaOSC();
         }
+         if(Input.GetKeyDown(KeyCode.H)){
+            sendOSC.hideFastMoneyResp();   
+        }
+        
     }
 
     public void sendRespsViaOSC(){
         List<string> l=new List<string>();
+        Debug.Log(l);
         l.AddRange(finalResponses);
+        foreach(string s in finalResponses){
+            Debug.Log(s);
+        }
         sendOSC.sendFastMoneyAnswrs(l);
     }
 }

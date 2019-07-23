@@ -19,6 +19,8 @@ public class FastMoneyController : MonoBehaviour
         for(int i =0;i<resp.Length;i++){
             resp[i].status =0;
             resp[i].gameObject.SetActive(a);
+            resp[i].hideResp();
+            resp[i].status=0;
             points=0;
             pointsTxt.text=points+"";
             
@@ -34,7 +36,7 @@ public class FastMoneyController : MonoBehaviour
     void Update()
     {
 
-        //Testing:   
+
         if(Input.GetKeyDown(KeyCode.Space)){
             activateFastMoney();
             Debug.Log("puplate");
@@ -54,14 +56,24 @@ public class FastMoneyController : MonoBehaviour
     }
 
     public void populateResp(List<object> r){
-
+        activateFastMoney();
         if(resp.Length==10){
-            for(int i =0; i<resp.Length;i++){
+            for(int i =0; i<10;i++){
                 string aux = System.Convert.ToString( r[i]);
                 Debug.Log(aux);
-                string s= aux.Split(',')[0];
-                int p=  int.Parse(aux.Split(',')[1]);
-                resp[i].setValues(s,p);
+                string[] s= aux.Split(',');
+                //Debug.Log(s.Length);
+                if(s.Length==2){
+                    string q = s[0];
+                    int p;
+                    if(q==resp[i].respText.text){continue;}
+                    if(int.TryParse(s[1],out p)){
+                        resp[i].setValues(q,p);
+                        continue;
+                    }
+                }
+                resp[i].setValues("",0);
+                
             }
         }else{
             Debug.Log("arrayList is not size 10");
@@ -82,6 +94,7 @@ public class FastMoneyController : MonoBehaviour
         //return false;
     }
     public void activateFastMoney(){
+
         setRespActive(true);
         manager.clearResp();
 

@@ -28,6 +28,7 @@ public class respFastMoney : MonoBehaviour
             status++;
             return false;
         }else if(status==1){
+            respText.gameObject.SetActive(true);
             respPoints.gameObject.SetActive(true);
             status++;
             return true;
@@ -52,5 +53,6 @@ public class respFastMoney : MonoBehaviour
         points = p;
         respPoints.text = p+"";
         hideResp();
+        //status=0;
     }
 }
