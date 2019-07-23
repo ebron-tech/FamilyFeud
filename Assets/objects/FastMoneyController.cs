@@ -6,12 +6,15 @@ public class FastMoneyController : MonoBehaviour
 {
     
     public respFastMoney[] resp;
-    public TMPro.TextMeshPro pointsTxt;
+    //public TMPro.TextMeshPro pointsTxt;
     BoardManager manager;
+    public bool isFastMoneyRunning; //I hate have this flag but no time for optimized methods
     int points;
+    VisualBoard visualPoints;
     void Start()
     {
         manager= GameObject.FindObjectOfType<BoardManager>();
+        visualPoints=manager.gameObject.GetComponent<VisualBoard>();
         disableFastMenu();
         //gameObject.SetActive(false);
     }
@@ -22,7 +25,7 @@ public class FastMoneyController : MonoBehaviour
             resp[i].hideResp();
             resp[i].status=0;
             points=0;
-            pointsTxt.text=points+"";
+            visualPoints.resetVisualPoints();
             
         }
     }
@@ -35,8 +38,6 @@ public class FastMoneyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if(Input.GetKeyDown(KeyCode.Space)){
             activateFastMoney();
             Debug.Log("puplate");
@@ -87,7 +88,7 @@ public class FastMoneyController : MonoBehaviour
                // resp.clip=sounds[0];
                 //resp.Play();
                 points+=resp[id].getPoints();
-                pointsTxt.text=points+"";
+                visualPoints.updateCurrentPoints(points);
                 //return true;
             };
         }
@@ -97,10 +98,13 @@ public class FastMoneyController : MonoBehaviour
 
         setRespActive(true);
         manager.clearResp();
+        isFastMoneyRunning=true;
 
     }
     public void disableFastMenu(){
         setRespActive(false);
+        isFastMoneyRunning=false;
        // gameObject.SetActive(false);
     }
+    
 }

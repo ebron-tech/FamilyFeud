@@ -15,44 +15,74 @@ public class BoardManagerInputs : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1)){
-            boardManager.showResponse(0);
-            fmController.showResponse(0);
+                fmController.showResponse(0);
+            if(fmController.isFastMoneyRunning){
+            }else{
+                boardManager.showResponse(0);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha2)){
-            boardManager.showResponse(1);
-            fmController.showResponse(1);
+           if(fmController.isFastMoneyRunning){
+                fmController.showResponse(1);
+            }else{
+                boardManager.showResponse(1);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha3)){
-            boardManager.showResponse(2);
-            fmController.showResponse(2);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(2);
+            }else{
+                boardManager.showResponse(2);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha4)){
-            boardManager.showResponse(3);
-            fmController.showResponse(3);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(3);
+            }else{
+                boardManager.showResponse(3);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha5)){
-            boardManager.showResponse(4);
-            fmController.showResponse(4);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(4);
+            }else{
+                boardManager.showResponse(4);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha6)){
-            boardManager.showResponse(5);
-            fmController.showResponse(5);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(5);
+            }else{
+                boardManager.showResponse(5);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha7)){
-            boardManager.showResponse(6);
-            fmController.showResponse(6);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(6);
+            }else{
+                boardManager.showResponse(6);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha8)){
-            boardManager.showResponse(7);
-            fmController.showResponse(7);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(7);
+            }else{
+                boardManager.showResponse(7);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha9)){
-            boardManager.showResponse(8);
-            fmController.showResponse(8);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(8);
+            }else{
+                boardManager.showResponse(8);
+            }
         }
         if(Input.GetKeyDown(KeyCode.Alpha0)){
-            boardManager.showResponse(9);
-            fmController.showResponse(9);
+            if(fmController.isFastMoneyRunning){
+                fmController.showResponse(9);
+            }else{
+                boardManager.showResponse(9);
+            }
         }
         if(Input.GetKeyDown(KeyCode.H)){
             fmController.hideResp();

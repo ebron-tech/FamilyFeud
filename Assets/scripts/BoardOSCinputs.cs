@@ -32,8 +32,11 @@ public class BoardOSCinputs : MonoBehaviour
         switch(addres){
             case "resp/":
                 Debug.Log(values[0]);
-                boardManager.showResponse(int.Parse(System.Convert.ToString(values[0])));
-                fmoneyController.showResponse(int.Parse(System.Convert.ToString(values[0])));
+                if(fmoneyController.isFastMoneyRunning){ 
+                    fmoneyController.showResponse(int.Parse(System.Convert.ToString(values[0])));
+                }else{
+                    boardManager.showResponse(int.Parse(System.Convert.ToString(values[0])));
+                }
             break;
             case "winner/":
                 Debug.Log("Server-TakeThePoints:"+values[0]);

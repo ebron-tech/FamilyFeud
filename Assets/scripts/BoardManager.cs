@@ -107,7 +107,7 @@ public class BoardManager : MonoBehaviour
             if( respObjects[id].showResponse()){
                 audioSrc.clip=sounds[0];
                 audioSrc.Play();
-                respObjects[id].getPoints();
+                currentPoints+=respObjects[id].getPoints();
                 visualBoard.updateCurrentPoints(currentPoints);
                 //return true;
             };

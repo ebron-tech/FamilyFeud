@@ -9,15 +9,18 @@ public class VisualBoard : MonoBehaviour
     int cPoints,lPoints,rPoints;
     void Start()
     {
-        updateCurrentPoints(0);
-        updateLeftPoints(0);
-        updateRightPoints(0);
+        resetVisualPoints();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void resetVisualPoints(){
+        updateCurrentPoints(0);
+        updateLeftPoints(0);
+        updateRightPoints(0);
     }
     public void updateCurrentPoints(int p){
         cPoints=p;
