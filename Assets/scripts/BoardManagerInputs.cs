@@ -15,8 +15,8 @@ public class BoardManagerInputs : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1)){
-                fmController.showResponse(0);
             if(fmController.isFastMoneyRunning){
+                fmController.showResponse(0);
             }else{
                 boardManager.showResponse(0);
             }

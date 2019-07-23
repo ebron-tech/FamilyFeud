@@ -63,11 +63,13 @@ public class DashboardSendOSC : MonoBehaviour
     public void changeScene(int i){
         OSCHandler.Instance.SendMessageToClient("controller","changeScene/",i);
         Debug.Log("goFastMoney:"+i);
-        
     }
     public void repeated(int i =1){
         OSCHandler.Instance.SendMessageToClient("controller","repeated/",i);
     } 
+    public void soundAction(string s){
+        OSCHandler.Instance.SendMessageToClient("controller","sound/",s);
+    }
     
 
     void OnApplicationQuit(){

@@ -76,6 +76,10 @@ public class BoardOSCinputs : MonoBehaviour
                     break;
                 }
             break;
+            case "sound/":
+            Debug.Log("Sound Recieved:"+values[0]);
+                //soundManager.SoundControll(values[0]);
+            break;
             
             default:
                 Debug.Log("Server-DefaultCase: "+addres);
