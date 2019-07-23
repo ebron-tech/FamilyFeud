@@ -30,6 +30,7 @@ public class BoardManager : MonoBehaviour
         visualBoard= gameObject.GetComponent<VisualBoard>();
         strikeCtl= gameObject.GetComponent<strikeController>();
         Application.runInBackground=true;
+        currentPoints=0;
     }
 
 
@@ -54,6 +55,7 @@ public class BoardManager : MonoBehaviour
                 visualBoard.updateCurrentPoints(currentPoints=0);
                 clearResp();
                 instantiateResp(sessions[sessionId].Rounds[roundId].Resp);
+                pointsGivedToTeam=false;
             }else{
                 Debug.Log("That sesion exist but the round dont");
             }
@@ -105,7 +107,7 @@ public class BoardManager : MonoBehaviour
             if( respObjects[id].showResponse()){
                 audioSrc.clip=sounds[0];
                 audioSrc.Play();
-                currentPoints+=respObjects[id].getPoints();
+                respObjects[id].getPoints();
                 visualBoard.updateCurrentPoints(currentPoints);
                 //return true;
             };

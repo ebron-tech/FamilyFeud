@@ -24,8 +24,8 @@ public class DashboardController : MonoBehaviour
     }
 
     void Start(){
-        sessionID=2;
-        roundID=3;
+        sessionID=0;
+        roundID=0;
         intsantiateSessions(sessionID);
         Debug.Log("ControllerStart");
        // instantiateRounds(roundID);
