@@ -8,8 +8,10 @@ public class BoardOSCinputs : MonoBehaviour
     BoardManager boardManager;
     public FastMoneyController fmoneyController;
     public int port =9001;
+    BoardSoundManager soundM;
     //OscServer server;
     void Awake(){
+        soundM= GameObject.FindObjectOfType<BoardSoundManager>();
         OSCHandler.Instance.Init("server",port);
         boardManager = gameObject.GetComponent<BoardManager>();
 
@@ -78,7 +80,7 @@ public class BoardOSCinputs : MonoBehaviour
             break;
             case "sound/":
             Debug.Log("Sound Recieved:"+values[0]);
-                //soundManager.SoundControll(values[0]);
+                soundM.playSoundType(System.Convert.ToString(values[0]));
             break;
             
             default:

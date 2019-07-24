@@ -10,8 +10,10 @@ public class respFastMoney : MonoBehaviour
 	Animation rotateShow;
 	int points;
     public int status;
+    BoardSoundManager soundM;
     void Start()
     {
+            soundM = GameObject.FindObjectOfType<BoardSoundManager>();
            respText.gameObject.SetActive(false);
            respPoints.gameObject.SetActive(false);
     }
@@ -25,11 +27,13 @@ public class respFastMoney : MonoBehaviour
     public bool showResponse(){
         if(status==0){
             respText.gameObject.SetActive(true);
+            soundM.playSoundType("resp");
             status++;
             return false;
         }else if(status==1){
             respText.gameObject.SetActive(true);
             respPoints.gameObject.SetActive(true);
+            soundM.playSoundType("hitBell");
             status++;
             return true;
         }else{

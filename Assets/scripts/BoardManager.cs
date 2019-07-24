@@ -22,6 +22,7 @@ public class BoardManager : MonoBehaviour
     public AudioClip[] sounds;
     AudioSource audioSrc;
     strikeController strikeCtl;
+    BoardSoundManager soundM;
 
     void Awake(){
         sessions = util.getRoundsFromFolder("rounds");
@@ -29,6 +30,7 @@ public class BoardManager : MonoBehaviour
         audioSrc= gameObject.GetComponent<AudioSource>();
         visualBoard= gameObject.GetComponent<VisualBoard>();
         strikeCtl= gameObject.GetComponent<strikeController>();
+        soundM = GameObject.FindObjectOfType<BoardSoundManager>();
         Application.runInBackground=true;
         currentPoints=0;
     }
@@ -105,8 +107,9 @@ public class BoardManager : MonoBehaviour
     public void showResponse(int id){
         if(id<respObjects.Count && respObjects.Count>0){
             if( respObjects[id].showResponse()){
-                audioSrc.clip=sounds[0];
-                audioSrc.Play();
+                //audioSrc.clip=sounds[0];
+                //audioSrc.Play();
+                soundM.playSoundType("resp");
                 currentPoints+=respObjects[id].getPoints();
                 visualBoard.updateCurrentPoints(currentPoints);
                 //return true;
@@ -155,22 +158,25 @@ public class BoardManager : MonoBehaviour
         }return false;
     }
     public void repeatedAnswer(){
-        audioSrc.clip=sounds[2];
-        audioSrc.Play();
+        //audioSrc.clip=sounds[2];
+        //audioSrc.Play();
+        soundM.playSoundType("duplicated");
     }
     public void strike(){
         if(strikes <3){
             strikes++;
             strikeCtl.triggerStrike(strikes);
-            audioSrc.clip=sounds[1];
-            audioSrc.Play();
+            //audioSrc.clip=sounds[1];
+            //audioSrc.Play();
+            soundM.playSoundType("wrong");
             Debug.Log(strikes);
         }
     }
     public void strike(int count){
         strikeCtl.triggerStrike(count);
-        audioSrc.clip=sounds[1];
-        audioSrc.Play();
+        //audioSrc.clip=sounds[1];
+        //audioSrc.Play();
+        soundM.playSoundType("wrong");
         Debug.Log(strikes);
     }
 

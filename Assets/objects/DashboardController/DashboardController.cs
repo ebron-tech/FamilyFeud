@@ -8,6 +8,7 @@ public class DashboardController : MonoBehaviour
     public GameObject sessionPannel, roundsPannel, respPannel;
     public GameObject sessionBtnPfb, roundsBtnPfb, respBtnPfb;
     public TMPro.TextMeshProUGUI txtQuestion;
+    public DashboardStrikes strikesCtl;
 
     List<SessionsButton> sessionObjs;
     List<Answerbutton> anwsrObjs;
@@ -16,6 +17,7 @@ public class DashboardController : MonoBehaviour
 
     public int sessionID,roundID;
     void Awake(){
+        strikesCtl = GameObject.FindObjectOfType<DashboardStrikes>();
         sessionObjs = new List<SessionsButton>();
         anwsrObjs = new List<Answerbutton>();
         roundObjs = new List<RoundsButton>();
@@ -49,6 +51,7 @@ public class DashboardController : MonoBehaviour
             auxObj.transform.SetParent(sessionPannel.gameObject.transform);
             auxObj.transform.localScale=Vector3.one;
             sessionObjs.Add(auxObj);
+            
         }
         instantiateRounds(roundID);
         
@@ -71,6 +74,7 @@ public class DashboardController : MonoBehaviour
     }
    public  void instantiateResp(RoundElement rE){
        Debug.Log("instantiateResp");
+       strikesCtl.ActivateResetStrikes();
         cleanAnwsObjs();
         txtQuestion.text=rE.Question;
         for( int i=0; i<rE.Resp.Length;i++){
