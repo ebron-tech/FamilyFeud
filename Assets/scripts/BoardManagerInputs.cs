@@ -12,6 +12,7 @@ public class BoardManagerInputs : MonoBehaviour
     }
 
     // Update is called once per frame
+    bool isHide;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1)){
@@ -85,7 +86,8 @@ public class BoardManagerInputs : MonoBehaviour
             }
         }
         if(Input.GetKeyDown(KeyCode.H)){
-            fmController.hideResp();
+            fmController.hideResp((isHide)?0:1);
+            isHide=!isHide;
         }
       
         //Plays the repeated sound

@@ -29,9 +29,13 @@ public class FastMoneyController : MonoBehaviour
             
         }
     }
-    public void hideResp(){
-        for(int i =0;i<resp.Length;i++){
-            resp[i].hideResp();
+    public void hideResp(int id){
+        for(int i =0;i<5;i++){
+            if( id==0){
+                resp[i].hideResp();
+            }else{
+                resp[i].showResponse();
+            }
         }
     }
 
@@ -57,7 +61,7 @@ public class FastMoneyController : MonoBehaviour
     }
 
     public void populateResp(List<object> r){
-        activateFastMoney();
+        //activateFastMoney();
         if(resp.Length==10){
             for(int i =0; i<10;i++){
                 string aux = System.Convert.ToString( r[i]);
@@ -95,7 +99,6 @@ public class FastMoneyController : MonoBehaviour
         //return false;
     }
     public void activateFastMoney(){
-
         setRespActive(true);
         manager.clearResp();
         isFastMoneyRunning=true;
@@ -104,6 +107,7 @@ public class FastMoneyController : MonoBehaviour
     public void disableFastMenu(){
         setRespActive(false);
         isFastMoneyRunning=false;
+        manager.resetBoard();
        // gameObject.SetActive(false);
     }
     

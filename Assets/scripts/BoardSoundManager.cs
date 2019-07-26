@@ -45,7 +45,7 @@ public class BoardSoundManager : MonoBehaviour
             stopAllSounds();
         }
         if(Input.GetKeyDown(KeyCode.H)){
-            hitBell.Play();
+            //hitBell.Play();
         }
     }
     public void playSoundType(string soundType){

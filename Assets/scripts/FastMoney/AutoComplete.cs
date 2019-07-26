@@ -95,11 +95,16 @@ public class AutoComplete : MonoBehaviour
                 sendRespsViaOSC();
         }
          if(Input.GetKeyDown(KeyCode.H)){
-            sendOSC.hideFastMoneyResp();   
+            hideResp1();
         }
         
     }
 
+    bool isHide;
+    public void hideResp1(){
+        sendOSC.hideFastMoneyResp((isHide)?1:0); 
+        isHide = !isHide;
+    }
     public void sendRespsViaOSC(){
         List<string> l=new List<string>();
         Debug.Log(l);

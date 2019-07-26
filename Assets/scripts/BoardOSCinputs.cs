@@ -55,7 +55,7 @@ public class BoardOSCinputs : MonoBehaviour
                 }
             break;
             case "hidefm/":
-                fmoneyController.hideResp();
+                fmoneyController.hideResp(System.Convert.ToInt32(values[0]));
             break;
             case "loadRound/":
                 string str= System.Convert.ToString(values[0]);

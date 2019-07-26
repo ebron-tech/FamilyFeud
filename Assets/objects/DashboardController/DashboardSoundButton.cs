@@ -7,10 +7,14 @@ public class DashboardSoundButton : MonoBehaviour
     public string sKeyDown, soundType;
     KeyCode keyPressed;
     DashboardSendOSC sendOSC;
+    DashboardCanvasSwitch canvasSwitch;
+    AutoComplete autoComp;
     void Start()
     {
         keyPressed = (KeyCode) System.Enum.Parse(typeof(KeyCode), sKeyDown.ToUpper() ) ;
         sendOSC = GameObject.FindObjectOfType<DashboardSendOSC>(); 
+        canvasSwitch = GameObject.FindObjectOfType<DashboardCanvasSwitch>();
+        autoComp =  GameObject.FindObjectOfType<AutoComplete>();
     }
 
     // Update is called once per frame
@@ -21,6 +25,13 @@ public class DashboardSoundButton : MonoBehaviour
         }
     }
     public void triggerSound(){
-         sendOSC.soundAction(soundType);
+        if(canvasSwitch.isFastMoneyTime){
+            if(!autoComp.isTextInputSelected){
+                sendOSC.soundAction(soundType);
+            }
+        }
+        else{
+            sendOSC.soundAction(soundType);
+        }
     }
 }

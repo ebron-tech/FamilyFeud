@@ -23,7 +23,7 @@ public class BoardManager : MonoBehaviour
     AudioSource audioSrc;
     strikeController strikeCtl;
     BoardSoundManager soundM;
-
+    int multiplyPoints;
     void Awake(){
         sessions = util.getRoundsFromFolder("rounds");
         //Debug.Log(sessions[0].Rounds[0].Question);
@@ -35,7 +35,22 @@ public class BoardManager : MonoBehaviour
         currentPoints=0;
     }
 
-
+    public void resetBoard(){
+        currentPoints=0; 
+        leftPoints=0;
+        rightPoints=0;
+        visualBoard.resetVisualPoints();
+        loadQuestionsByIds(sessionID,roundID);
+    }
+    void setForcePointsR(int p){
+        leftPoints=p;
+    }
+    void setForcePointsL(int p){
+        rightPoints=p;
+    }
+    void setForcePointsC(int p){
+        currentPoints=p; 
+    }
     void Start(){
         //load the init Sessions and Rounds by index (0,0)
         loadQuestionsByIds(sessionID,roundID);
@@ -57,6 +72,7 @@ public class BoardManager : MonoBehaviour
                 visualBoard.updateCurrentPoints(currentPoints=0);
                 clearResp();
                 instantiateResp(sessions[sessionId].Rounds[roundId].Resp);
+                multiplyPoints= (int)sessions[sessionId].Rounds[roundId].Multi;
                 pointsGivedToTeam=false;
             }else{
                 Debug.Log("That sesion exist but the round dont");
@@ -110,7 +126,7 @@ public class BoardManager : MonoBehaviour
                 //audioSrc.clip=sounds[0];
                 //audioSrc.Play();
                 soundM.playSoundType("resp");
-                currentPoints+=respObjects[id].getPoints();
+                currentPoints+=respObjects[id].getPoints()*multiplyPoints;
                 visualBoard.updateCurrentPoints(currentPoints);
                 //return true;
             };
