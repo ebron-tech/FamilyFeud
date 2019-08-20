@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardSoundManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AudioSource game,resp, ring, fast,win, begin,duplicated,exit, wrong,hitBell;
+    public AudioSource game,resp, ring, fast,win, begin,duplicated,exit, wrong,hitBell, button;
     void Start()
     {
         
@@ -18,7 +18,7 @@ public class BoardSoundManager : MonoBehaviour
             game.Play();
         }
         if(Input.GetKeyDown(KeyCode.R)){
-            ring.Play();
+            button.Play();
         }
         if(Input.GetKeyDown(KeyCode.F)){
             fast.Play();
@@ -82,6 +82,9 @@ public class BoardSoundManager : MonoBehaviour
             break;
             case "wrong":
                 wrong.Play();
+            break;
+            case "button":
+                button.Play();
             break;
         }
     }
