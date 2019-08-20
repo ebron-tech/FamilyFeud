@@ -1,0 +1,90 @@
+{
+  "rounds":[
+    {
+       "multi":1,
+       "question":"Actor o Actriz mexicano famoso que es conocido en USA",
+       "resp":[
+        {"name":"Diego Luna","points": 		30},
+        {"name":"Gael García","points":		18},
+        {"name":"Salma Hayek","points":		14},
+        {"name":"Eugenio Derbez","points":		9},
+        {"name":"Yalitza Aparicio","points":		6}
+       ]
+    },
+    {
+      "multi":1,
+       "question":"¿Qué es lo primero que hace un oficinista cuando llega a su trabajo?",
+       "resp":[
+        {"name":"Saludar","points":		30},
+        {"name":"Checar","points":		19},
+        {"name":"Ponerse a trabajar","points":		14},
+        {"name":"Prender la computadora","points":		6},
+        {"name":"Desayunar","points":		2}
+       ]
+    },{
+      "multi":1,
+       "question":"¿Además de enchiladas a que otro platillo mexicano le pones crema y queso?",
+       "resp":[
+        {"name":"Tacos dorados","points":		21},
+        {"name":"Chilaquiles","points":		17},
+        {"name":"Tostados","points":		15},
+        {"name":"Pambazos","points":		11},
+        {"name":"Sopes","points":		8}
+       ]
+    },{
+      "multi":2,
+       "question":"Características de una ambulancia",
+       "resp":[
+        {"name":"Sirena","points":		36},
+        {"name":"Camilla","points":		25},
+        {"name":"Paramédicos","points":		17},
+        {"name":"Medicamentos","points":		12},
+        {"name":"Oxígeno","points":		8}
+       ]
+    }
+  ],
+  "FastMoney":[
+    {
+      "question":"¿Qué te pone el doctor cuando te fracturas un hueso?",
+      "resp":[
+        {"name":"Ferula/Yeso","points":35},
+        {"name":"venda", "points":25}
+      ]
+    },
+    {
+      "question":"Tipo de calzón de un hombre",
+      "resp":[
+        {"name":"Boxers","points":35}
+      ]
+    },{
+      "question":"3. Sabor más común de un raspado",
+      "resp":[
+        {"name":"Jamaica","points":50},
+        {"name":"Nuez", "points":25},
+        {"name":"Limon", "points":5},
+        {"name":"guayaba", "points":3}
+      ]
+    },{
+      "question":"¿Como te refrescas cuando hace calor?",
+      "resp":[
+        {"name":"Comiendo Helado","points":70},
+        {"name":"Ducha", "points":25},
+        {"name":"AC/Ventilador", "points":15}
+      ]
+    },{
+      "question":"Genero musical que más se escucha en la radio",
+      "resp":[
+        {"name":"Pop","points":30},
+        {"name":"Rock", "points":15}
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+

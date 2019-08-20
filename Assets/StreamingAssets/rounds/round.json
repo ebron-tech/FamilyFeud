@@ -2,90 +2,124 @@
   "rounds":[
     {
        "multi":1,
-       "question":"Actor o Actriz mexicano famoso que es conocido en USA",
+       "question":"Razones por las que el Pastor se va tarde de la congre",
        "resp":[
-        {"name":"Diego Luna","points": 		30},
-        {"name":"Gael García","points":		18},
-        {"name":"Salma Hayek","points":		14},
-        {"name":"Eugenio Derbez","points":		9},
-        {"name":"Yalitza Aparicio","points":		6}
+        {"name":"Lo intercepta un nuevo","points":		27},
+        {"name":"Orando por algun hermano","points":		22},
+        {"name":"Consejería express","points":		16},
+        {"name":"Guardando la ofrenda","points":		13},
+        {"name":"Cerrando la iglesia","points":		6}
        ]
     },
     {
       "multi":1,
-       "question":"¿Qué es lo primero que hace un oficinista cuando llega a su trabajo?",
+       "question":"Tipos de predicador en una iglesia",
        "resp":[
-        {"name":"Saludar","points":		30},
-        {"name":"Checar","points":		19},
-        {"name":"Ponerse a trabajar","points":		14},
-        {"name":"Prender la computadora","points":		6},
-        {"name":"Desayunar","points":		2}
-       ]
-    },{
-      "multi":1,
-       "question":"¿Además de enchiladas a que otro platillo mexicano le pones crema y queso?",
-       "resp":[
-        {"name":"Tacos dorados","points":		21},
-        {"name":"Chilaquiles","points":		17},
-        {"name":"Tostados","points":		15},
-        {"name":"Pambazos","points":		11},
-        {"name":"Sopes","points":		8}
+        {"name":"El chistoso","points":		30},
+        {"name":"El gritón","points":		19},
+        {"name":"El que da muchas definiciones (etimologo)","points":		14},
+        {"name":"El que predica largo","points":		6},
+        {"name":"El que siempre hace llamado","points":		2}
        ]
     },{
       "multi":2,
-       "question":"Características de una ambulancia",
+       "question":"Tipos de personas que te encuentras durante la predicación",
        "resp":[
-        {"name":"Sirena","points":		36},
-        {"name":"Camilla","points":		25},
-        {"name":"Paramédicos","points":		17},
-        {"name":"Medicamentos","points":		12},
-        {"name":"Oxígeno","points":		8}
+        {"name":"El que se duerme","points":		21},
+        {"name":"El que de todo grita amén (gritón)","points":		17},
+        {"name":"El que se la pasa en el celular","points":		15},
+        {"name":"El que trae el bebe llorón","points":		11},
+        {"name":"El que anota todo y pone atención","points":		8}
+       ]
+    },{
+      "multi":3,
+       "question":"Paros que te pone la sierva cuando no le gustas",
+       "resp":[
+        {"name":"No es el tiempo de Dios","points":		36},
+        {"name":"Te quiero pero solo como amigo","points":		25},
+        {"name":"Te veo como hermano","points":		17},
+        {"name":"Voy a orar y te aviso","points":		12},
+        {"name":"No me dejan tener novio","points":		8}
        ]
     }
   ],
   "FastMoney":[
     {
-      "question":"¿Qué te pone el doctor cuando te fracturas un hueso?",
+      "question":"Además de sencilla menciona otro tipo de habitación en un hotel",
       "resp":[
-        {"name":"Ferula/Yeso","points":35},
-        {"name":"venda", "points":25}
+        {"name":"Doble","points":	30},
+        {"name":"suite de lujo","points":	18},
+        {"name":"Pent house","points":	15},
+        {"name":"Master suite","points":	18},
+        {"name":"Triple","points":	20},
+        {"name":"Cuádruple","points":	8},
+        {"name":"Suite de luna de miel","points":	6},
+        {"name":"Suite presidencial","points":	5}
       ]
     },
     {
-      "question":"Tipo de calzón de un hombre",
+      "question":"Estado o ciudad en México que inicia con la letra S",
       "resp":[
-        {"name":"Boxers","points":35}
+        {"name":"Sinaloa",	"points":33},
+        {"name":"Sonora",	"points":25},
+        {"name":"Saltillo",	"points":20},
+        {"name":"San Luis potosi",	"points":19},
+        {"name":"San Miguel de Allende",	"points":17},
+        {"name":"San Juan del rio",	"points":15},
+        {"name":"Salamanca",	"points":12},
+        {"name":"Silao ",	"points":10},
+        {"name":"Santiago",	"points":8}
       ]
     },{
-      "question":"3. Sabor más común de un raspado",
+      "question":"Sabor más común de un raspado",
       "resp":[
-        {"name":"Jamaica","points":50},
-        {"name":"Nuez", "points":25},
-        {"name":"Limon", "points":5},
-        {"name":"guayaba", "points":3}
+        {"name":"Coco","points":	23},
+        {"name":"Nuez","points":	20},
+        {"name":"Limon","points":	15},
+        {"name":"Arrayán","points":	10},
+        {"name":"Jamaica","points":	15},
+        {"name":"Vainilla","points":	23},
+        {"name":"Grosella","points":	12},
+        {"name":"Guayaba","points":	15},
+        {"name":"Uva","points":	10},
+        {"name":"Fresa","points":	20},
+        {"name":"Tamarindo","points":	25},
+        {"name":"Mango con chile","points":	20},
+        {"name":"Piña","points":	10},
+        {"name":"Mango con chile","points":	15},
+        {"name":"Guanabana","points":	10},
+        {"name":"Ciruela","points":	12},
+        {"name":"Cajeta","points":	5},
+        {"name":"Rompope","points":	5},
+        {"name":"Kiwi","points":	2},
+        {"name":"Chocolate","points": 	1},
+        {"name":"Capuchino","points":	2}
       ]
     },{
-      "question":"¿Como te refrescas cuando hace calor?",
+      "question":"Artículo que no dejan pasar en un avión",
       "resp":[
-        {"name":"Comiendo Helado","points":70},
-        {"name":"Ducha", "points":25},
-        {"name":"AC/Ventilador", "points":15}
+        {"name":"Desodorante en aerosol","points":36},
+        {"name":"Navajas","points":30},
+        {"name":"Armas de fuego","points":22},
+        {"name":"Cuchillo","points":25},
+        {"name":"Tijeras","points":15},
+        {"name":"Desarmador","points":10},
+        {"name":"Martillo","points":5},
+        {"name":"Gel en aerosol","points":20},
+        {"name":"Medicamentos","points":10}
       ]
     },{
-      "question":"Genero musical que más se escucha en la radio",
+      "question":"Si mandas un mensaje por celular que aplicación utilizas",
       "resp":[
-        {"name":"Pop","points":30},
-        {"name":"Rock", "points":15}
+        {"name":"Whatsapp","points":	36},
+        {"name":"Facebook Inbox","points":	25},
+        {"name":"Instagram","points":	25},
+        {"name":"Snapchat","points":	12},
+        {"name":"Mensajes SMS","points":	15},
+        {"name":"Correo electrónico","points":	10},
+        {"name":"Voxer","points":	5}
+
       ]
     }
   ]
 }
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,81 @@
+{
+  "rounds":[
+    {
+       "multi":1,
+       "question":"Qué delata a una persona nerviosa?",
+       "resp":[
+          {"name":"Movimiento de las manos","points":27},
+          {"name":"Sudor","points":21},
+          {"name":"Su voz/ Tartamudea","points":10},
+          {"name":"Se muerde las uñas","points":9},
+          {"name":"Mueve los pies","points":6}
+       ]
+    },
+    {
+      "multi":1,
+       "question":"Además de aventar al novio ¿Qué otro ritual se practica en una boda?",
+       "resp":[
+          {"name":"Aventar el ramo","points":35},
+          {"name":"Aventar la liga","points":23},
+          {"name":"Víbora de la mar","points":12},
+          {"name":"Pegarle dinero a la novia","points":5},
+          {"name":"Juntar 2 velas","points":3}
+       ]
+    },{
+      "multi":1,
+       "question":"Verdura que compras en tamaño mini",
+       "resp":[
+          {"name":"Zanahoria","points":21},
+          {"name":"Jitomate/ tomate","points":16},
+          {"name":"Papa","points":11},
+          {"name":"Cebolla","points":9},
+          {"name":"Lechuga","points":4}
+       ]
+    },{
+      "multi":2,
+       "question":"¿Qué hacen los gatos?",
+       "resp":[
+          {"name":"Maúllan","points":23},
+          {"name":"Rasguñan","points":16},
+          {"name":"Ronronean","points":12},
+          {"name":"Duermen","points":10},
+          {"name":"Rascan","points":7}
+       ]
+    }
+  ],
+  "FastMoney":[
+    {
+      "question":"Si fueras integrante del recodo, que instrumento tocarías?",
+      "resp":[
+        {"name":"Trompeta","points":35},
+        {"name":"Bajo", "points":25},
+        {"name":"Tuba", "points":25}
+      ]
+    },
+    {
+      "question":"Material del que está hecha una regla",
+      "resp":[
+        {"name":"metal","points":45},
+        {"name":"madera","points":25}
+      ]
+    },{
+      "question":"Deporte en el que se usa poca ropa",
+      "resp":[
+        {"name":"Natacion","points":30}
+      ]
+    },{
+      "question":"¿Cuánto dinero deja un ratón por diente?",
+      "resp":[
+        {"name":"$50","points":30},
+        {"name":"$20", "points":25},
+        {"name":"$100", "points":15}
+      ]
+    },{
+      "question":"Sin decir marcas, tipo de azúcar",
+      "resp":[
+        {"name":"Morena","points":30},
+        {"name":"Stevia", "points":15}
+      ]
+    }
+  ]
+}

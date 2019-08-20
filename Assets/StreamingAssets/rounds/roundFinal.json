@@ -1,45 +1,14 @@
 {
   "rounds":[
     {
-       "multi":1,
-       "question":"Que planes hacen los jóvenes para salir después de un servicio",
+       "multi":3,
+       "question":"Además de casas y gente, que más puedes hallar en un pueblito",
        "resp":[
-        {"name":"Vamos a los tacos","points":		27},
-        {"name":"A la casa de fulano/ fulana","points":		21},
-        {"name":"Vamos al cine","points":		10},
-        {"name":"Vamos al boliche","points":		9},
-        {"name":"A jugar algún deporte (futbol)","points":		6}
-       ]
-    },
-    {
-      "multi":1,
-       "question":"Menciona una alabanza que se considera vieja confiable",
-       "resp":[
-        {"name":"Te doy gloria","points":		35},
-        {"name":"Renuévame","points": 		23},
-        {"name":"Tu fidelidad","points":		12},
-        {"name":"Cuan grande es Dios","points":		5},
-        {"name":"Vamos a cantar","points":		3}
-       ]
-    },{
-      "multi":2,
-       "question":"Paros que ponen los hermanos para no asistir a una tarde de limpieza en la iglesia",
-       "resp":[
-        {"name":"Ya tenía un compromiso previo","points":		21},
-        {"name":"Estoy enfermo","points":		16},
-        {"name":"Tengo trabajo","points":		11},
-        {"name":"Tengo tarea","points":		9},
-        {"name":"No tengo como moverme","points":		4}
-       ]
-    },{
-      "multi":3,
-       "question":"Que es lo más común que se les olvida a los hermanos en la iglesia",
-       "resp":[
-        {"name":"Biblia","points":		23},
-        {"name":"Bolsa","points":		16},
-        {"name":"Celular","points":		12},
-        {"name":"Sueter/ chamarra","points":		10},
-        {"name":"Llaves casa/carro","points": 		7}
+        {"name":"Iglesia","points":		23},
+        {"name":"Plaza/ Parque","points":		19},
+        {"name":"Kiosko","points":		13},
+        {"name":"Tiendas de artesanías","points":		9},
+        {"name":"Raspados","points":		7}
        ]
     }
   ],
@@ -111,6 +80,7 @@
     }
   ]
 }
+
 
 
 
