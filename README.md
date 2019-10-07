@@ -1,7 +1,3 @@
----
-title: 'Family Feud'
-
----
 ###### tags:  `EBRON` `EBRON.TECH` `unity` `church`
 
 # Family Feud
