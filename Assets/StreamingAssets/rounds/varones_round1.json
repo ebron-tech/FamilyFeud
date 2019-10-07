@@ -2,44 +2,44 @@
   "rounds":[
     {
        "multi":1,
-       "question":"Razones por las que el Pastor se va tarde de la congre",
+       "question":"Sin mencionar equipos nacionales, a que equipo de futból europeo le van los hombres",
        "resp":[
-        {"name":"Lo intercepta un nuevo","points":		27},
-        {"name":"Orando por algun hermano","points":		22},
-        {"name":"Consejería express","points":		16},
-        {"name":"Guardando la ofrenda","points":		13},
-        {"name":"Cerrando la iglesia","points":		6}
+        {"name":"Real Madrid","points":35},
+        {"name":"Barcelona","points":20},
+        {"name":"Juventus","points":15},
+        {"name":"Arsenal","points":12},
+        {"name":"Liverpool","points":5}
        ]
     },
     {
       "multi":1,
-       "question":"Tipos de predicador en una iglesia",
+       "question":"Entre los hombres, ¿Cuál es el deporte más popular?",
        "resp":[
-        {"name":"El chistoso","points":		30},
-        {"name":"El gritón","points":		19},
-        {"name":"El que da muchas definiciones (etimologo)","points":		14},
-        {"name":"El que predica largo","points":		6},
-        {"name":"El que siempre hace llamado","points":		2}
+        {"name":"Futbol","points":30},
+        {"name":"Futbol Americano","points":19},
+        {"name":"Boxeo","points":14},
+        {"name":"Lucha libre","points":6},
+        {"name":"Basket ball","points":2}
        ]
     },{
       "multi":2,
-       "question":"Tipos de personas que te encuentras durante la predicación",
+       "question":"Menciona algo que los hombres deben saber hacer con respecto a su carro",
        "resp":[
-        {"name":"El que se duerme","points":		21},
-        {"name":"El que de todo grita amén (gritón)","points":		17},
-        {"name":"El que se la pasa en el celular","points":		15},
-        {"name":"El que trae el bebe llorón","points":		11},
-        {"name":"El que anota todo y pone atención","points":		8}
+        {"name":"Cambiar una llanta","points":36},
+        {"name":"Pasar corriente","points":15},
+        {"name":"Checar niveles de aceite","points":12},
+        {"name":"Checar niveles de aire en las llantas","points":10},
+        {"name":"Donde va el anticongelante","points":7}
        ]
     },{
       "multi":3,
-       "question":"Paros que te pone la sierva cuando no le gustas",
+       "question":"Si pudieras ser superhéroe, que poder escogerías",
        "resp":[
-        {"name":"No es el tiempo de Dios","points":		36},
-        {"name":"Te quiero pero solo como amigo","points":		25},
-        {"name":"Te veo como hermano","points":		17},
-        {"name":"Voy a orar y te aviso","points":		12},
-        {"name":"No me dejan tener novio","points":		8}
+        {"name":"Super fuerza","points":36},
+        {"name":"Volar","points":25},
+        {"name":"Super rapidez","points":17},
+        {"name":"Leer la mente","points":12},
+        {"name":"Invisibilidad","points":8}
        ]
     }
   ],

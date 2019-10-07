@@ -1,0 +1,89 @@
+{
+  "rounds":[
+    {
+       "multi":1,
+       "question":"¿Qué tratamiento ó revisión médica le tienen miedo los hombres?",
+       "resp":[
+        {"name":"Exámen de la próstata","points":27},
+        {"name":"Vasectomía","points":22},
+        {"name":"Inyecciones","points":16},
+        {"name":"Ir con el dentista","points":13},
+        {"name":"Enema","points":6}
+       ]
+    },
+    {
+      "multi":1,
+       "question":"Razones por las que se enoja tu mujer",
+       "resp":[
+        {"name":"Se te olvida el aniversario (fecha importante)","points":35},
+        {"name":"Llegar tarde a la casa","points":23},
+        {"name":"Se fue con sus amigotes","points":12},
+        {"name":"dejar la tapa arriba/no bajarle al baño","points":5},
+        {"name":"Por desorden","points":3}
+       ]
+    },{
+      "multi":2,
+       "question":"Que cosas hace tu mujer que te exasperan",
+       "resp":[
+        {"name":"Que lo corrijan en público","points":21},
+        {"name":"Que te estén recordando o repitiendo las cosas","points":16},
+        {"name":"Que te digan \"te lo dije\"","points":11},
+        {"name":"Que te den instrucciones mientras manejas","points":9},
+        {"name":"Que se tarden en arreglarse","points":4}
+       ]
+    },{
+      "multi":3,
+       "question":"Cosas propias de las mujeres que si nos pasaran a los hombres nos darían mucho miedo",
+       "resp":[
+        {"name":"Parir un niño","points":21},
+        {"name":"Cólicos/ periodo","points":17},
+        {"name":"Cambios hormonales/ Menopausia","points":15},
+        {"name":"Ida al ginecólogo","points":11},
+        {"name":"Engordar","points":8}
+       ]
+    }
+  ],
+  "FastMoney":[
+    {
+      "question":"Si fueras integrante del recodo, que instrumento tocarías?",
+      "resp":[
+        {"name":"Tuba", "points":37},
+        {"name":"Trompeta","points":21},
+        {"name":"Tarola","points":17},
+        {"name":"Bajo", "points":16}
+      ]
+    },
+    {
+      "question":"Material del que está hecha una regla",
+      "resp":[
+        {"name":"Metal","points":31},
+        {"name":"Madera","points":22},
+        {"name":"Plastico","points":13}
+      ]
+    },{
+      "question":"Deporte en el que se usa poca ropa",
+      "resp":[
+        {"name":"Natacion","points":29},
+        {"name":"Clavados","points":24},
+        {"name":"Box","points":21},
+        {"name":"voleibol","points":13},
+        {"name":"Atletismo","points":9}
+      ]
+    },{
+      "question":"¿Cuánto dinero deja un ratón por diente?",
+      "resp":[
+        {"name":"$50","points":30},
+        {"name":"$20", "points":25},
+        {"name":"$100", "points":15}
+
+      ]
+    },{
+      "question":"Sin decir marcas, tipo de azúcar",
+      "resp":[
+        {"name":"Morena","points":30},
+        {"name":"Stevia", "points":15},
+        {"name":"moscabada", "points":15}
+      ]
+    }
+  ]
+}

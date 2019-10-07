@@ -1,0 +1,92 @@
+{
+  "rounds":[
+    {
+       "multi":1,
+       "question":"Objeto que pones en un mueble de televisión",
+       "resp":[
+        {"name":"DVD/ Blue Ray","points":27},
+        {"name":"Fotos/ Portarretratos","points":21},
+        {"name":"Floreros/ Adorno","points":10},
+        {"name":"Control remoto","points":9},
+        {"name":"Bocinas","points":6}
+       ]
+    },
+    {
+     "multi":1,
+      "question":"Cosas que haces para que un bebé deje de llorar",
+      "resp":[
+        {"name":"Cargarlo/ Abrazarlo","points":32},
+        {"name":"Darle Biberón/ Darle de comer","points":23},
+        {"name":"Arrullarlo","points":12},
+        {"name":"Darle su chupón","points":8},
+        {"name":"Darle un juguete","points":5}
+       ]
+    },{
+     "multi":2,
+      "question":"Manera típica de coquetear sin hablar",
+      "resp":[
+        {"name":"Con la mirada","points":21},
+        {"name":"Guiñar el ojo","points":18},
+        {"name":"Sonreír","points":11},
+        {"name":"Con mensajes","points":10},
+        {"name":"Palmadita","points": 4}
+       ]
+    },{
+     "multi":3,
+      "question":"Que haces con la ropa que ya no te queda",
+      "resp":[
+        {"name":"Regalarla/ Donarla","points":23},
+        {"name":"Ajustarla/ Arreglarla/ Cortarla","points":16},
+        {"name":"Venderla","points":12},
+        {"name":"Guardarla","points":10},
+        {"name":"Tirarla","points":7}
+       ]
+    }
+  ],
+ "FastMoney":[
+    {
+     "question":"Además de Mayonesa que otra cosa le puedes untar a un sandwich",
+     "resp":[
+      {"name":"Mostaza","points":20},
+      {"name":"Queso philadelphia","points":30},
+      {"name":"Crema","points":35},
+      {"name":"Mermelada","points":20},
+      {"name":"Cajeta","points":12},
+      {"name":"Aguacate","points":20}
+      ]
+    },
+    {
+      "question":"Animal que no tiene patas",
+      "resp":[
+        {"name":"Serpiente","points":31},
+        {"name":"Gusano","points":25},
+        {"name":"Pez","points":15}
+      ]
+    },{
+      "question":"Lo primero que haces cuando chocas",
+      "resp":[
+        {"name":"Grito","points":15},
+        {"name":"Llorar","points":3},
+        {"name":"Enojarse","points":15},
+        {"name":"Llamar al seguro","points":10}
+      ]
+    },{
+      "question":"Prenda más común de un árabe",
+      "resp":[
+        {"name":"Turbante","points":47},
+        {"name":"Burka","points":25},
+        {"name":"Sandalias","points":20},
+        {"name":"Cuchillo","points":15}
+      ]
+    },{
+      "question":"Menciona un color de la bandera de México",
+      "resp":[
+        {"name":"Verde","points":49},
+        {"name":"Rojo","points":30},
+        {"name":"Blanco","points":20},
+        {"name":"Amarillo","points":10},
+        {"name":"Café","points":15}
+      ]
+    }
+  ]
+}

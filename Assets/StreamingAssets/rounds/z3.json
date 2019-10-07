@@ -1,0 +1,121 @@
+{
+  "rounds":[
+    
+    {
+     "multi":1,
+      "question":"Animal que brinca",
+      "resp":[
+        {"name":"Canguro","points":30},
+        {"name":"Conejo","points":19},
+        {"name":"Rana/Sapo","points":14},
+        {"name":"Chapulin/ Grillo/ Saltamontes","points":6},
+        {"name":"Gato","points":2}
+       ]
+    },
+    {
+      "multi":1,
+      "question":"Menciona uno de los hijos de David",
+      "resp":[
+       {"name":"Salomon","points":35},
+       {"name":"Absalon","points":20},
+       {"name":"Amnon","points":15},
+       {"name":"Tamar","points":12}
+      ]
+   },{
+     "multi":2,
+      "question":"Cuando vas de visita, que no se puede introducir a un hospital?",
+      "resp":[
+        {"name":"Alimentos","points":36},
+        {"name":"Armas","points":15},
+        {"name":"Bebidas Alcohólicas","points":12},
+        {"name":"Niños","points":10},
+        {"name":"Animales","points":7}
+       ]
+    },{
+     "multi":3,
+      "question":"Frutos del espíritu",
+      "resp":[
+        {"name":"Amor","points":36},
+        {"name":"Gozo","points":25},
+        {"name":"Paz","points":17},
+        {"name":"Fe","points":12},
+        {"name":"Paciencia","points":8}
+       ]
+    }
+  ],
+ "FastMoney":[
+    {
+     "question":"Menciona algo que tenga un final",
+     "resp":[
+      {"name":"Una película","points":29},
+      {"name":"Obra de teatro","points":18},
+      {"name":"Telenovela","points":15},
+      {"name":"Cuento","points":18},
+      {"name":"Libro","points":20},
+      {"name":"Relación","points":8},
+      {"name":"Plática","points":6},
+      {"name":"Viaje","points":5},
+      {"name":"Vida","points":4}
+      ]
+    },
+    {
+      "question":"Mujeres del antiguo testamento",
+      "resp":[
+        {"name":"Ruth /Noemi","points":33},
+        {"name":"Eva","points":25},
+        {"name":"Ester","points":20},
+        {"name":"Sara","points":19},
+        {"name":"Rebeca","points":17},
+        {"name":"Debora","points":15},
+        {"name":"Ramma","points":13},
+        {"name":"Lea","points":12},
+        {"name":"Jezabel","points":12},
+        {"name":"Mical","points":12}
+      ]
+    },{
+      "question":"Sabor más común de un raspado",
+      "resp":[
+        {"name":"Coco","points":	23},
+        {"name":"Nuez","points":	20},
+        {"name":"Limon","points":	15},
+        {"name":"Arrayán","points":	10},
+        {"name":"Jamaica","points":	15},
+        {"name":"Vainilla","points":	23},
+        {"name":"Grosella","points":	12},
+        {"name":"Guayaba","points":	15},
+        {"name":"Uva","points":	10},
+        {"name":"Fresa","points":	20},
+        {"name":"Tamarindo","points":	25},
+        {"name":"Mango con chile","points":	20},
+        {"name":"Piña","points":	10},
+        {"name":"Mango con chile","points":	15},
+        {"name":"Guanabana","points":	10},
+        {"name":"Ciruela","points":	12},
+        {"name":"Cajeta","points":	5},
+        {"name":"Rompope","points":	5},
+        {"name":"Kiwi","points":	2},
+        {"name":"Chocolate","points": 	1},
+        {"name":"Capuchino","points":	2}
+      ]
+    },{
+      "question":"Caracteristicas de un elefante",
+      "resp":[
+        {"name":"Trompa","points":	25},
+        {"name":"Grande","points":	20},
+        {"name":"Gris","points":	15},
+        {"name":"Cola pequeña","points":	10},
+        {"name":"Duro","points":	20},
+        {"name":"Rugoso","points":	5},
+        {"name":"Orejotas","points":	15}
+      ]
+    },{
+      "question":"¿Cuánto dinero deja un ratón por diente?",
+      "resp":[
+        {"name":"$50","points":30},
+        {"name":"$20", "points":25},
+        {"name":"$100", "points":15}
+
+      ]
+    }
+  ]
+}

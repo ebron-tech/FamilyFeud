@@ -1,0 +1,117 @@
+{
+  "rounds":[
+    {
+      "multi":1,
+      "question":"Razones por las que el Pastor se va tarde de la congre",
+      "resp":[
+       {"name":"Lo intercepta un nuevo","points":		27},
+       {"name":"Orando por algun hermano","points":		22},
+       {"name":"Consejería express","points":		16},
+       {"name":"Guardando la ofrenda","points":		13},
+       {"name":"Cerrando la iglesia","points":		6}
+      ]
+   },
+    {
+     "multi":1,
+      "question":"Menciona un don del Espíritu Santo.",
+      "resp":[
+        {"name":"Lenguas","points":30},
+        {"name":"Profecia","points":19},
+        {"name":"Sanidad","points":14},
+        {"name":"Milagos","points":6},
+        {"name":"Enseñanza","points":2}
+       ]
+    },{
+     "multi":2,
+     "question":"Menciona el nombre de un Heroe de independencia de Mexico.",
+      "resp":[
+        {"name":"Miguel Hidalgo","points":36},
+        {"name":"Morelos","points":25},
+        {"name":"Josefa Ortiz","points":17},
+        {"name":"Vicente Guerrero","points":12},
+        {"name":"El pipila","points":8}
+       ]
+    },{
+     "multi":3,
+     "question":"Tipos de personas que te encuentras durante la predicación",
+     "resp":[
+      {"name":"El que se duerme","points":		21},
+      {"name":"El que de todo grita amén (gritón)","points":		17},
+      {"name":"El que se la pasa en el celular","points":		15},
+      {"name":"El que trae el bebe llorón","points":		11},
+      {"name":"El que anota todo y pone atención","points":		8}
+     ]
+
+    }
+  ],
+ "FastMoney":[
+    {
+      "question":"Menciona el nombre de un Profeta",
+      "resp":[
+        {"name":"Elias","points":41},
+        {"name":"Isaias","points":30},
+        {"name":"Jeremias","points":22},
+        {"name":"Habacuc","points":25},
+        {"name":"Natan","points":15},
+        {"name":"Daniel","points":10},
+        {"name":"Moises","points":10},
+        {"name":"Ezequiel","points":10},
+        {"name":"Miqueas","points":10},
+        {"name":"Oseas","points":10},
+        {"name":"Ezequias","points":10},
+        {"name":"Eliseo","points":5}
+
+      ]
+    },
+    {
+      "question":"Aparte de ropa, que más guardas en el clóset",
+      "resp":[
+        {"name":"Zapatos","points":33},
+        {"name":"Cobijas","points":25},
+        {"name":"Fotos","points":20},
+        {"name":"Botiquin","points":19},
+        {"name":"Papeles","points":17},
+        {"name":"Joyería","points":15},
+        {"name":"Dinero","points":12}
+      ]
+    },{
+      "question":"Pan dulce mas popular",
+      "resp":[
+        {"name":"Concha","points":	35},
+        {"name":"Dona","points":	30},
+        {"name":"Cuernito","points":	25},
+        {"name":"Mantecadas","points":	20},
+        {"name":"Polvorones","points":	12},
+        {"name":"Empanadas","points":	20},
+        {"name":"Galletas","points":	5},
+        {"name":"Roles de canela","points":	10},
+        {"name":"Bollos/Muffins/Cupcakes","points":	16}
+      ]
+    },{
+      "question":"Artículo que no dejan pasar en un avión",
+      "resp":[
+        {"name":"Desodorante en aerosol","points":36},
+        {"name":"Navajas","points":30},
+        {"name":"Armas de fuego","points":22},
+        {"name":"Cuchillo","points":25},
+        {"name":"Tijeras","points":15},
+        {"name":"Desarmador","points":10},
+        {"name":"Martillo","points":5},
+        {"name":"Gel en aerosol","points":20},
+        {"name":"Medicamentos","points":10}
+      ]
+    },{
+      "question":"Si mandas un mensaje por celular que aplicación utilizas",
+      "resp":[
+        {"name":"Whatsapp","points":	36},
+        {"name":"Facebook Inbox","points":	25},
+        {"name":"Instagram","points":	25},
+        {"name":"Snapchat","points":	12},
+        {"name":"Mensajes SMS","points":	15},
+        {"name":"Correo electrónico","points":	10},
+        {"name":"Voxer","points":	5}
+
+      ]
+    }
+  ]
+}

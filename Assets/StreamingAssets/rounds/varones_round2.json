@@ -1,14 +1,45 @@
 {
   "rounds":[
     {
-       "multi":3,
-       "question":"Además de casas y gente, que más puedes hallar en un pueblito",
+       "multi":1,
+       "question":"¿Qué haces antes de ir a ver a la novia?",
        "resp":[
-        {"name":"Iglesia","points":		23},
-        {"name":"Plaza/ Parque","points":		19},
-        {"name":"Kiosko","points":		13},
-        {"name":"Tiendas de artesanías","points":		9},
-        {"name":"Raspados","points":		7}
+        {"name":"Bañarse","points":27},
+        {"name":"Vestirse Bien","points":21},
+        {"name":"Lavarse los dientes","points":10},
+        {"name":"Perfumarse","points":9},
+        {"name":"Peinarse","points":6}
+       ]
+    },
+    {
+      "multi":1,
+       "question":"Además de martillo y desarmador, menciona una herramienta que siempre debes tener en tu caja",
+       "resp":[
+        {"name":"Pinzas de electricista","points":32},
+        {"name":"Flexómetro","points":23},
+        {"name":"Cutter","points":12},
+        {"name":"Taladro","points":8},
+        {"name":"Nivel","points":5}
+       ]
+    },{
+      "multi":2,
+       "question":"Menciona un paro que ponen los hombres para no ir a su reunión de varones",
+       "resp":[
+        {"name":"Salgo cansado de trabajar","points":21},
+        {"name":"Es el día que salgo con mi mujer","points":18},
+        {"name":"Estoy enfermo","points":11},
+        {"name":"Me queda muy lejos la iglesia","points":10},
+        {"name":"Tengo que cuidar a mis hijos","points":4}
+       ]
+    },{
+      "multi":3,
+       "question":"Oficio o profesión que todo hombre quería tener de grande",
+       "resp":[
+        {"name":"Futbolista","points":23},
+        {"name":"Astronauta","points":16},
+        {"name":"Presidente","points":12},
+        {"name":"Bombero/ Policia","points":10},
+        {"name":"Ciéntifico/Inventor","points":7}
        ]
     }
   ],
@@ -80,14 +111,3 @@
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-

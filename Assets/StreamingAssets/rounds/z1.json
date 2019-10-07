@@ -1,0 +1,100 @@
+{
+  "rounds":[
+    {
+       "multi":1,
+       "question":"¿Con qué se puede tapar el drenaje?",
+       "resp":[
+        {"name":"Basura/exceso de basura","points":35},
+        {"name":"Cabellos/exceso de cabello","points":20},
+        {"name":"Comida","points":15},
+        {"name":"Tierra/Lodo","points":12},
+        {"name":"Papel","points":5}
+       ]
+    },
+    {
+     "multi":1,
+      "question":"Animal que brinca",
+      "resp":[
+        {"name":"Canguro","points":30},
+        {"name":"Conejo","points":19},
+        {"name":"Rana/Sapo","points":14},
+        {"name":"Chapulin/ Grillo/ Saltamontes","points":6},
+        {"name":"Gato","points":2}
+       ]
+    },{
+     "multi":2,
+      "question":"Cuando vas de visita, que no se puede introducir a un hospital?",
+      "resp":[
+        {"name":"Alimentos","points":36},
+        {"name":"Armas","points":15},
+        {"name":"Bebidas Alcohólicas","points":12},
+        {"name":"Niños","points":10},
+        {"name":"Animales","points":7}
+       ]
+    },{
+     "multi":3,
+      "question":"¿Qué tratamiento ó revisión médica le tienen miedo los hombres?",
+      "resp":[
+        {"name":"Exámen de la próstata","points":36},
+        {"name":"Vasectomía","points":25},
+        {"name":"Inyecciones","points":17},
+        {"name":"Ir con el dentista","points":12},
+        {"name":"Enema","points":8}
+       ]
+    }
+  ],
+ "FastMoney":[
+    {
+     "question":"Menciona algo que tenga un final",
+     "resp":[
+      {"name":"Una película","points":29},
+      {"name":"Obra de teatro","points":18},
+      {"name":"Telenovela","points":15},
+      {"name":"Cuento","points":18},
+      {"name":"Libro","points":20},
+      {"name":"Relación","points":8},
+      {"name":"Plática","points":6},
+      {"name":"Viaje","points":5},
+      {"name":"Vida","points":4}
+      ]
+    },
+    {
+      "question":"Aparte de ropa, que más guardas en el clóset",
+      "resp":[
+        {"name":"Zapatos","points":33},
+        {"name":"Cobijas","points":25},
+        {"name":"Fotos","points":20},
+        {"name":"Botiquin","points":19},
+        {"name":"Papeles","points":17},
+        {"name":"Joyería","points":15},
+        {"name":"Dinero","points":12}
+      ]
+    },{
+      "question":"Cantante que canta canciones contra los hombres",
+      "resp":[
+        {"name":"Paquita ","points":51},
+        {"name":"Jenny Rivera","points":30}
+      ]
+    },{
+      "question":"Fruta de la que sacas jugo",
+      "resp":[
+        {"name":"Naranja","points":41},
+        {"name":"Limón","points":30},
+        {"name":"Lima","points":22},
+        {"name":"Mango","points":25},
+        {"name":"Uva","points":15},
+        {"name":"Manzana","points":10},
+        {"name":"Toronja","points":5}
+
+      ]
+    },{
+      "question":"Además de gas, con qué puedes calentar agua",
+      "resp":[
+        {"name":"Electricidad","points":38},
+        {"name":"Madera, fogata","points":25},
+        {"name":"Sol","points":25},
+        {"name":"Manos","points":12}
+      ]
+    }
+  ]
+}
